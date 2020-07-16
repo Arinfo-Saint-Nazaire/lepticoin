@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Notice index{% endblock %}
+
+{% block body %}
+    <h1>Notice index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>TitleNotice</th>
+                <th>PriceNotice</th>
+                <th>DescriptionNotice</th>
+                <th>LocationNotice</th>
+                <th>PhotoOneNotice</th>
+                <th>PhotoTwoNotice</th>
+                <th>PhotoThreeNotice</th>
+                <th>DateNotice</th>
+                <th>CategoryProfessionnalNotice</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for notice in notices %}
+            <tr>
+                <td>{{ notice.id }}</td>
+                <td>{{ notice.titleNotice }}</td>
+                <td>{{ notice.priceNotice }}</td>
+                <td>{{ notice.descriptionNotice }}</td>
+                <td>{{ notice.locationNotice }}</td>
+                <td>{{ notice.photoOneNotice }}</td>
+                <td>{{ notice.photoTwoNotice }}</td>
+                <td>{{ notice.photoThreeNotice }}</td>
+                <td>{{ notice.dateNotice ? notice.dateNotice|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ notice.categoryProfessionnalNotice ? 'Yes' : 'No' }}</td>
+                <td>
+                    <a href="{{ path('notice_show', {'id': notice.id}) }}">show</a>
+                    <a href="{{ path('notice_edit', {'id': notice.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="11">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('notice_new') }}">Create new</a>
+{% endblock %}
