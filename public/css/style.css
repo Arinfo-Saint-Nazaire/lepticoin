@@ -1,0 +1,32 @@
+.navbar {
+  width: 70%;
+  margin: auto; }
+
+.navbar-light .navbar-brand {
+  color: #FF6E14;
+  font-size: xx-large;
+  font-family: "Fredoka One", Arial, Helvetica, sans-serif; }
+
+.btn {
+  background-color: #FF6E14; }
+
+._3ULE3
+._1MxlY._3ihzT::before {
+  content: "";
+  display: block;
+  background: #ff6e14;
+  height: 5rem; }
+
+._3ULE3 ._1MxlY::after {
+  content: "";
+  display: block;
+  background: #ff6e14;
+  -webkit-border-radius: 0 0 50% 50%/0 0 100% 100%;
+  border-radius: 0 0 50% 50%/0 0 100% 100%;
+  margin: -.8rem -2.4rem 0;
+  height: 8rem; }
+
+body {
+  color: #FF6E14; }
+
+/*# sourceMappingURL=style.css.map */
