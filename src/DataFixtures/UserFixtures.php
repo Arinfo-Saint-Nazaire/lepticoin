@@ -15,7 +15,7 @@ class UserFixtures extends Fixture
                 ->setLastNameUser("Van Damme")
                 ->setEmail("BeAware@aware.all")
                 ->setPassword("JCVD")
-                ->setPhotoUser("http://placehold.it/100x75")
+                ->setPhotoUser("http://placehold.it/50x75")
                 ->setBirthdayDateUser(new \DateTime())
                 ->setPhoneUser("12 35 67 89 00")
                 ->setAdressUser("Dojo Van Damme")
