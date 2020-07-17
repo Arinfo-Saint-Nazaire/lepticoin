@@ -14,9 +14,9 @@ class UserFixtures extends Fixture
             $User->setFirstNameUser("Jean Claude")
                 ->setLastNameUser("Van Damme")
                 ->setEmail("BeAware@aware.all")
-                ->setPasswordUser("JCVD")
+                ->setPassword("JCVD")
                 ->setPhotoUser("http://placehold.it/100x75")
-                ->setBirthdayDateUser(new \DateTime('Y-m-d'))
+                // ->setBirthdayDateUser(new \DateTime('m'-'d'-'Y'))
                 ->setPhoneUser("12 35 67 89 00")
                 ->setAdressUser("Dojo Van Damme")
                 ->setPostalCodeUser("90001 (CA)")
@@ -24,7 +24,7 @@ class UserFixtures extends Fixture
                 ->setCivilityUser(1)
                 ->setRegistrationDateUser(new \DateTime())
                 ->setPseudoUser("JCVD")
-                ->setRoles('["ROLE_USER", "ROLE_ADMIN"]');
+                ->setRoles(["ROLE_USER", "ROLE_ADMIN"]);
 
             $manager->persist($User);
 
