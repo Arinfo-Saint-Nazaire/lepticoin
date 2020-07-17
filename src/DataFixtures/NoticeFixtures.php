@@ -12,13 +12,13 @@ class NoticeFixtures extends Fixture
     {
         for ($i = 0; $i < 20; $i++) {
             $Notice = new Notice();
-            $Notice->setTitleNotice("Title Notice n°$i")
+            $Notice->setTitleNotice("Annonce n°$i")
                 ->setPriceNotice(99)
-                ->setDescriptionNotice("<p>Description Notice n°$i</p>")
-                ->setLocationNotice("<p>Location Notice n°$i</p>")
-                ->setPhotoOneNotice("http://placehold.it/350x150")
-                ->setPhotoTwoNotice("http://placehold.it/350x150")
-                ->setPhotoThreeNotice("http://placehold.it/350x150")
+                ->setDescriptionNotice("<p>Description n°$i</p>")
+                ->setLocationNotice("<p>Lieu n°$i</p>")
+                ->setPhotoOneNotice("http://placehold.it/100x75")
+                ->setPhotoTwoNotice("http://placehold.it/100x75")
+                ->setPhotoThreeNotice("http://placehold.it/100x75")
                 ->setDateNotice(new \DateTime())
                 ->setCategoryProfessionnalNotice(1);
 

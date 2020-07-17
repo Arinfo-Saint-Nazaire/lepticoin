@@ -27,11 +27,11 @@
                 <td>{{ notice.id }}</td>
                 <td>{{ notice.titleNotice }}</td>
                 <td>{{ notice.priceNotice }}</td>
-                <td>{{ notice.descriptionNotice }}</td>
-                <td>{{ notice.locationNotice }}</td>
-                <td>{{ notice.photoOneNotice }}</td>
-                <td>{{ notice.photoTwoNotice }}</td>
-                <td>{{ notice.photoThreeNotice }}</td>
+                <td>{{ notice.descriptionNotice | raw}}</td>
+                <td>{{ notice.locationNotice | raw}}</td>
+                <td><img src="{{ notice.photoOneNotice | raw}}" alt="photoOneNotice"></td>
+                <td><img src="{{ notice.photoTwoNotice | raw}}" alt="photoTwoNotice"></td>
+                <td><img src="{{ notice.photothreeNotice | raw}}" alt="photothreeNotice"></td>
                 <td>{{ notice.dateNotice ? notice.dateNotice|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ notice.categoryProfessionnalNotice ? 'Yes' : 'No' }}</td>
                 <td>
