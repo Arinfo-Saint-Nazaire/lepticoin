@@ -175,7 +175,6 @@ li.nav-search {
         color: rgb(51, 102, 153);
         text-decoration: none;
 
-
     }
 }
 
@@ -187,10 +186,32 @@ li.nav-search {
     @extend .btnLogin;
 }
 
+//Menu Principal User
 
+.UserUtilities{
+ border: 1px solid grey;
+ border-radius: 10px;
+max-width: 29%;
+margin-bottom: 2vh;
 
-.content {
-    height: 1500px;
+.UserUtilities2{
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin-bottom: 2vh;
+
 }
+
+.UserUtilities3{
+    border: 1px solid grey;
+    border-radius: 10px;
+    
+   
+ 
+ 
+}
+
+
+
+
 // @media screen and (max-width: 970px) {}
 
