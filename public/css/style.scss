@@ -1,3 +1,7 @@
+body {
+    color: #FF6E14;
+}
+
 .navbar {
     width: 70%;
     margin: auto;
@@ -14,8 +18,7 @@
     background-color: #FF6E14;
 }
 
-._3ULE3
-._1MxlY._3ihzT::before {
+._3ULE3 ._1MxlY._3ihzT::before {
     content: "";
     display: block;
     background: #ff6e14;
@@ -32,7 +35,39 @@
     height: 8rem;
 }
 
+//Loginformulaire
 
-body {
-    color:#FF6E14;
+.formLogin {
+    border-radius: 4px;
+    border: 1px solid rgb(184, 179, 179);
+    padding: 40px;
+    box-shadow: 0px 0px 16px 1px rgba(119, 119, 119, 0.59);
+    -moz-box-shadow: 0px 0px 16px 1px rgba(119, 119, 119, 0.59);
+    -webkit-box-shadow: 0px 0px 16px 1px rgba(119, 119, 119, 0.59);
+}
+
+.btnLogin {
+    background-color: rgb(65, 131, 215);
+    color: rgb(255, 255, 255);
+    border-color: rgb(65, 131, 215);
+    margin-bottom: 40px;
+    margin-top: 40px;
+
+    &:hover {
+        background-color: rgb(51, 102, 153);
+        text-decoration: none;
+        border-color: rgb(65, 131, 215);
+
+    }
+}
+
+.formCreateCountLink {
+    color: rgb(65, 131, 215);
+
+    &:hover {
+        color: rgb(51, 102, 153);
+        text-decoration: none;
+
+
+    }
 }
