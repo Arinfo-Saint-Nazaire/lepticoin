@@ -7,7 +7,7 @@
 		{# lien vers le template Bootswatch "United" #}
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/united/bootstrap.min.css" integrity="sha384-Uga2yStKRHUWCS7ORqIZhJ9LIAv4i7gZuEdoR1QAmw6H+ffhcf7yCOd0CvSoNwoz" crossorigin="anonymous">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<link src="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" />
+		
 		<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
 		{# Scripts nécessaires pour le dropdown si besoin #}
 		{# <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script> #}
@@ -15,12 +15,13 @@
 
         {# fonts #}
         <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+		<link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet"/>
 
 		{# lien vers style css #}
 		<link rel="stylesheet" href="{{asset("css/style.css")}}">
 
 		{# lien vers datatables js #}
-		<link  href="{{asset("js/script.js")}}"> 
+		<script  src="{{asset("js/script.js")}}"> </script>
 
 		<title>
 			{% block title %}Welcome!
