@@ -1,6 +1,6 @@
 
 body {
-    color: #FF6E14;
+    color: #FF6E14;  }
 
 :root{
     --main-color: #FF6E14;
@@ -179,9 +179,15 @@ li.nav-search {
     }
 }
 
-body {
-    color: #FF6E14;
+//login register
+.formRegister{
+    @extend .formLogin;
 }
+.btnRegister{
+    @extend .btnLogin;
+}
+
+
 
 .content {
     height: 1500px;
