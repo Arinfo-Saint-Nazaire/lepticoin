@@ -1,10 +1,10 @@
-
 body {
     color: #FF6E14;
+}
 
-:root{
+:root {
     --main-color: #FF6E14;
-  }
+}
 
 ///////////////////////////////////////////NAVBAR//////////////////////////////////////////
 
@@ -13,7 +13,6 @@ body {
     background-color: #fff;
     box-shadow: 0 3px 5px rgba(131, 50, 50, 0.15);
     height: 67px;
-
 }
 
 .navbar {
@@ -63,7 +62,8 @@ li.nav-item {
     height: 60px;
 }
 
-.far, .fas {
+.far,
+.fas {
     font-size: 1.9em;
     color: black;
     margin: auto;
@@ -76,12 +76,11 @@ li.nav-item {
     white-space: nowrap;
     margin-top: -5px;
     margin-bottom: -10px;
-
 }
 
 li.nav-search {
     display: flex;
-    align-items: center ;
+    align-items: center;
     margin-left: 15px;
 }
 
@@ -123,7 +122,6 @@ li.nav-search {
 ///////////////////////////////////////////NAVBAR//////////////////////////////////////////
 
 ._1MxlY::before {
-
     content: "";
     display: block;
     background: var(--main-color);
@@ -164,7 +162,6 @@ li.nav-search {
         background-color: rgb(51, 102, 153);
         text-decoration: none;
         border-color: rgb(65, 131, 215);
-
     }
 }
 
@@ -174,8 +171,6 @@ li.nav-search {
     &:hover {
         color: rgb(51, 102, 153);
         text-decoration: none;
-
-
     }
 }
 
@@ -186,5 +181,3 @@ body {
 .content {
     height: 1500px;
 }
-// @media screen and (max-width: 970px) {}
-
