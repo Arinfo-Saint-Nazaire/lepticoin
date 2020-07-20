@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<meta
-<<<<<<< HEAD
 		name="viewport" content="width=device-width, initial-scale=1"/>
 
 		{# lien vers le template Bootswatch "United" #}
@@ -21,30 +20,9 @@
 		href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"> {# lien vers style css #}
 		<link
 		rel="stylesheet" href="{{asset("css/style.css")}}">
-=======
-		<!-- script js -->
-        <script src="https://kit.fontawesome.com/dc423ef783.js" crossorigin="anonymous"></script>
-		<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script> 
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
-        
-        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
-
-		<link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet"/>
-
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-
-
-		{# lien vers style css #}
-		<link rel="stylesheet" href="{{asset("css/style.css")}}">
->>>>>>> bc8b8543312882cbe90b4a0006987b76bee0fa38
 
 		{# lien vers datatables js #}
-
-		<script  src="{{asset("js/script.js")}}"> </script>
-
+		<script src="{{asset("js/script.js")}}"></script>
 
 		{# ajout pour FAQ accordion js #}
 		{# <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -64,7 +42,6 @@
 		{% block stylesheets %}{% endblock %}
 	</head>
 	<body>
-<<<<<<< HEAD
 		<nav class="navbar navbar-expand-lg navbar-light">
 			<a class="navbar-brand" href="{{path('home')}}">Lepticoin</a>
 			{# <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -103,67 +80,10 @@
 		</nav>
 		<div class="_3ULE3">
 			<div class="_1MxlY _3ihzT"></div>
-=======
-		<div class="container-fluid topbar">
-			<nav class="navbar navbar-expand-lg navbar-light">
-				<a class="navbar-brand" href="{{path('home')}}">Lepticoin</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-
-				<div class="collapse navbar-collapse" id="navbarColor01">
-					<ul class="navbar-nav mr-auto">
-						<li class="nav-btn">
-
-							
-							<button type="button" class="btn btn-primary btn-pass_an_ad"><img class="pass_an_ad_icon"src="{{asset('icons/pass_an_ad_icon.ico')}}" alt="jesuislà">&nbsp;&nbsp;&nbsp;&nbsp;Déposer une annonce</button>
-						</li>
-						<li class="nav-search">
-							<i class="fas fa-search"></i>
-							<a class="nav-link" href="#">Rechercher</a>
-						</li>
-					</ul>
-
-					<ul class="navbar-nav mr-auto">
-						<li class="nav-item">
-							<i class="far fa-bell li_icon"></i>
-							<a class="nav-link" href="#">Mes recherches</a>
-						</li>
-						<li class="nav-item">
-							<i class="far fa-heart"></i>
-							<a class="nav-link" href="#">Favoris</a>
-						</li>
-						<li class="nav-item">
-							<i class="far fa-comment-alt"></i>
-							<a class="nav-link" href="#">Messages</a>
-						</li>
-						<li class="nav-item">
-							<i class="far fa-user"></i>
-							<a class="nav-link" href="#">Se connecter</a>
-						</li>
-					</ul>
-					{# <form class="form-inline my-2 my-lg-0">
-						<input class="form-control mr-sm-2" type="text" placeholder="Search">
-						<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-					</form> #}
-				</div>
-			</nav>
-		</div>
-        <div class="_3ULE3" >
-            <div class="_1MxlY _3ihzT" ></div>
-        </div>
-		<div>
-		</div>
-		<div class="content">
-			<p>hello !</p>
->>>>>>> bc8b8543312882cbe90b4a0006987b76bee0fa38
 		</div>
 
 
 		{% block body %}{% endblock %}
 		{% block javascripts %}{% endblock %}
-		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	</body>
 </html>
