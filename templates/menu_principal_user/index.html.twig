@@ -44,7 +44,7 @@
 		</div>
 		<div class="row justify-content-between">
 		{% for user in users %}
-			<a class="col-xl-4 UserUtilities" href="{{path('user_edit',{'id':user.id })}} ">
+			<a class="col-xl-4 UserUtilities" href="{{path('user_edit',{'id':app.user.id })}} ">
 		
 				<div>
 					<i class="far fa-user-circle m-4"></i>
