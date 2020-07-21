@@ -25,6 +25,7 @@ class FaqController extends AbstractController
         ]);
     }
 
+
     /**
      * @Route("/", name="faq_public", methods={"GET"})
      */
@@ -101,4 +102,5 @@ class FaqController extends AbstractController
 
         return $this->redirectToRoute('faq_index');
     }
+
 }

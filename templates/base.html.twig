@@ -1,33 +1,30 @@
 <!DOCTYPE html>
 <html>
+<!DOCTYPE html>
+<html>
 
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-	{# lien vers le template Bootswatch "United" #}
+	<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+		integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/united/bootstrap.min.css"
 		integrity="sha384-Uga2yStKRHUWCS7ORqIZhJ9LIAv4i7gZuEdoR1QAmw6H+ffhcf7yCOd0CvSoNwoz" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" />
-	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js">
-	</script>
-
-	{# Scripts nécessaires pour le dropdown si besoin #}
-	{# <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script> #}
-	{# <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> #}
-
-	{# fonts #}
 	<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
-	{# lien vers style css #}
-	<link rel="stylesheet" href="{{asset("css/style.css")}}">
-
-	{# lien vers datatables js #}
-	<script src="{{asset("js/script.js")}}"></script>
-
-	{# ajout pour FAQ accordion js #}
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<link rel="stylesheet" href="{{asset("css/accordionstyle.css")}}">
+	<link rel="stylesheet" href="{{asset("css/style.css")}}">
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="{{asset("js/script.js")}}"></script>
+	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js">
+	</script>
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
@@ -39,46 +36,53 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light">
-		<a class="navbar-brand" href="{{path('home')}}">Lepticoin</a>
-		{# <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
-						</button> #}
+	<div class="container-fluid topbar fixed-top">
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+				aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<a class="navbar-brand" href="{{path('home')}}">Lepticoin</a>
+			<div>
+				<a href="#"><i class="fas fa-search fa-responsive"></i></i></a>
+			</div>
 
-		<div class="collapse navbar-collapse" id="navbarColor01">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item">
-					<button type="button" class="btn btn-primary">Déposer une annonce</button>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Rechercher</a>
-				</li>
-			</ul>
+			<div class="collapse navbar-collapse" id="navbarColor01">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-btn">
 
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="#">Mes recherches</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Favoris</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Messages</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Se connecter</a>
-				</li>
-			</ul>
-			{# <form class="form-inline my-2 my-lg-0">
-									<input class="form-control mr-sm-2" type="text" placeholder="Search">
-									<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-								</form> #}
-		</div>
-	</nav>
-	<div class="_3ULE3">
-		<div class="_1MxlY _3ihzT"></div>
+						<button type="button" class="btn btn-primary btn-pass_an_ad"><img class="pass_an_ad_icon1"
+								src="{{asset('icons/pass_an_ad_icon.ico')}}" alt="">&nbsp;&nbsp;&nbsp;&nbsp;Déposer une
+							annonce</button>
+
+					</li>
+					<li class="nav-search">
+						<i class="fas fa-search"></i>
+						<a class="nav-link nav-link-search" href="#">Rechercher</a>
+					</li>
+				</ul>
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<i class="far fa-bell li_icon"></i>
+						<a class="nav-link" href="#">Mes recherches</a>
+					</li>
+					<li class="nav-item">
+						<i class="far fa-heart"></i>
+						<a class="nav-link" href="#">Favoris</a>
+					</li>
+					<li class="nav-item">
+						<i class="far fa-comment-alt"></i>
+						<a class="nav-link" href="#">Messages</a>
+					</li>
+					<li class="nav-item">
+						<i class="far fa-user"></i>
+						<a class="nav-link" href="#">Se connecter</a>
+					</li>
+				</ul>
+
+			</div>
+		</nav>
 	</div>
-
 	{% block body %}{% endblock %}
 
 	<footer>
@@ -113,10 +117,11 @@
 			cadre de la formation "développeur web et web mobile"</p>
 		<hr />
 		<p class="footer arinfo">Arinfo (juillet 2020)
-		<img src="{{ asset('images/logo-arinfo.jpg') }}" width="200" alt="logo Arinfo" class="logo-arinfo"></p>
+			<img src="{{ asset('images/logo-arinfo.jpg') }}" width="200" alt="logo Arinfo" class="logo-arinfo"></p>
 	</footer>
 
 	{% block javascripts %}{% endblock %}
 </body>
+
 
 </html>
