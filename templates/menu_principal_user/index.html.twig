@@ -10,7 +10,7 @@
 				<div class="row">
 					<div class="col-xl-6 ">
 						<i class="far fa-grin m-4"></i>
-						<h5 ="align-baseline">Gwendal Bescont</h5>
+						<h5 class="align-baseline">{{app.user.pseudoUser}}</h5>
 					</div>
 					<div class="col-xl-6 ">
 						<a href=" {{path('user_index')}} "><button class=" float-right btn btn-primary btn-lg  " type="submit">
@@ -43,13 +43,16 @@
 			</a>
 		</div>
 		<div class="row justify-content-between">
-			<a class="col-xl-4 UserUtilities" href="#">
+		{% for user in users %}
+			<a class="col-xl-4 UserUtilities" href="{{path('user_edit',{'id':user.id })}} ">
+		
 				<div>
 					<i class="far fa-user-circle m-4"></i>
 					<h5>Profil</h5>
 					<p>Modifier mon profil public, accéder à mes recommandations et à l’espace candidat</p>
 				</div>
 			</a>
+			{% endfor %}
 
 			<a class="col-xl-4 UserUtilities" href="#">
 				<div>
