@@ -16,4 +16,14 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+
+    /**
+     * @Route("/rgpd/index", name="rgpd")
+     */
+    public function rgpd()
+    {
+        return $this->render('rgpd/index.html.twig', [
+            'controller_name' => 'RgpdController',
+        ]);
+    }
 }

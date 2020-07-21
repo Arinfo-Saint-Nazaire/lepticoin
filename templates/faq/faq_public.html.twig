@@ -21,17 +21,19 @@
     }
 </style>
 
-<h1>Index F.A.Q.</h1>
-<div id="accordion">
-    {% for faq in faqs %}
-    <h3>{{ faq.question }}</h3>
-    <div>
-        <ul>
-            <li>{{ faq.answer }}</li>
-        </ul>
+<div class="faqtext">
+    <h2>Index F.A.Q.</h2>
+    <div id="accordion">
+        {% for faq in faqs %}
+        <h3>{{ faq.question }}</h3>
+        <div>
+            <ul>
+                <li>{{ faq.answer }}</li>
+            </ul>
+        </div>
+        {% else %}
+        <h3>no records found</h3>
+        {% endfor %}
     </div>
-    {% else %}
-    <h3>no records found</h3>
-    {% endfor %}
 </div>
 {% endblock %}

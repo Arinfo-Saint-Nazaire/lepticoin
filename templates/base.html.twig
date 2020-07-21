@@ -30,24 +30,6 @@
 	<link rel="stylesheet" href="{{asset("css/accordionstyle.css")}}">
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<script>
-		$(function () {
-			var icons = {
-				header: "ui-icon-circle-arrow-e",
-				activeHeader: "ui-icon-circle-arrow-s"
-			};
-			$("#accordion").accordion({
-				icons: icons
-			});
-			$("#toggle").button().on("click", function () {
-				if ($("#accordion").accordion("option", "icons")) {
-					$("#accordion").accordion("option", "icons", null);
-				} else {
-					$("#accordion").accordion("option", "icons", icons);
-				}
-			});
-		});
-	</script>
 
 	<title>
 		{% block title %}Welcome!
@@ -97,8 +79,43 @@
 		<div class="_1MxlY _3ihzT"></div>
 	</div>
 
-
 	{% block body %}{% endblock %}
+
+	<footer>
+		<div class="row footer">
+			<div class="col-md-4">
+				<h3>A propos du ptitcoin</h3>
+				<hr />
+				<p>Qui sommes-nous ?</p>
+				<p>Nous rejoindre</p>
+				<h3>Nos applications</h3>
+				<hr />
+			</div>
+			<div class="col-md-4">
+				<h3>Informations légales</h3>
+				<hr />
+				<p><a href="{{ path('legalNotice') }}">Conditions générales d’utilisation</a></p>
+				<p>Règles de diffusion, de référencement et de déréférencement</p>
+				<p>Conditions Générales de Vente</p>
+				<p><a href="{{ path('rgpd') }}">Vie privée / cookies</a></p>
+				<p>Vos droits et obligations</p>
+			</div>
+			<div class="col-md-4">
+				<h3>Des questions ?</h3>
+				<hr />
+				<p><a href="{{ path('faq_public') }}">Aide</a></p>
+				<p>Le service de paiement sécurisé et la livraison</p>
+				<p>Demandez conseil à la Communauté</p>
+			</div>
+		</div>
+		<hr />
+		<p class="footer lepticoin-footer">Lepticoin : exercice de production d'un site type "Leboncoin" dans le
+			cadre de la formation "développeur web et web mobile"</p>
+		<hr />
+		<p class="footer arinfo">Arinfo (juillet 2020)
+		<img src="{{ asset('images/logo-arinfo.jpg') }}" width="200" alt="logo Arinfo" class="logo-arinfo"></p>
+	</footer>
+
 	{% block javascripts %}{% endblock %}
 </body>
 

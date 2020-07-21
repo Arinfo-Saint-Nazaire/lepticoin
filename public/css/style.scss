@@ -184,8 +184,75 @@ li.nav-search {
     @extend .btnLogin;
 }
 
-
-
 .content {
     height: 1500px;
+}
+
+//Vincent
+
+.bonus-v {
+    text-align: center;
+
+    img {
+        margin: auto;
+    }
+}
+
+//legalnotice & rgpd
+
+.legalnoticetext, .rgpdtext, .faqtext {
+    color: black;
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    p, li {
+        font-size: 0.8rem;
+    }
+}
+
+//footer
+
+footer {
+    background-color: rgb(77, 75, 75);
+    color: white;
+
+    h3 {
+        font-size: 1.25rem;
+        margin-top: 20px;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    hr {
+        background-color: white;
+        max-width: 800px;
+    }
+
+    .footer {
+        max-width: 830px;
+        margin: auto;
+    }
+
+    .lepticoin-footer {
+        text-align: center;
+    }
+
+    .arinfo {
+        padding-left: 15px;
+        padding-bottom: 60px;
+    }
+
+    .logo-arinfo {
+        float: right;
+        padding-right: 15px;
+    }
 }
