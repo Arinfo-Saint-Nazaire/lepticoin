@@ -1,16 +1,6 @@
-body {
-  color: #FF6E14;
-}
-
 :root {
   --main-color: #FF6E14;
 }
-
-
-body {
-  color: var(--main-color);
-}
-
 
 .topbar {
   background-color: #fff;
@@ -42,29 +32,18 @@ body {
   background-color: var(--main-color);
   white-space: nowrap;
   margin-left: 5px;
-
   padding-right: 30px;
-
-
   font-weight: 500;
 }
 
 button img.pass_an_ad_icon1 {
   width: 14%;
   height: 14%;
-
 }
 
 i.fa-search {
   font-size: 1.5rem;
   margin-bottom: 6px;
-
-  background-color: black;
-}
-
-.pass_an_ad_icon:hover {
-  background-color: black;
-
 }
 
 li.nav-item {
@@ -82,11 +61,9 @@ li.nav-item {
   margin-bottom: 0;
 }
 
-
 .fa-responsive {
   display: none;
 }
-
 
 .navbar-light .navbar-nav .nav-link {
   font-family: "Open sans", Arial, sans-serif;
@@ -106,7 +83,6 @@ li.nav-search {
   margin-left: 15px;
 }
 
-
 a.nav-link.nav-link-search::after {
   margin-top: 11px;
   left: 30%;
@@ -117,7 +93,6 @@ a.nav-link.nav-link-search::after {
 a.nav-link.nav-link-search:hover::after {
   width: 125%;
 }
-
 
 .navbar-nav li a {
   display: block;
@@ -144,7 +119,6 @@ a.nav-link.nav-link-search:hover::after {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   height: 4px;
-
   width: 0%;
   background-color: var(--main-color);
   border-radius: 5px;
@@ -155,7 +129,6 @@ a.nav-link.nav-link-search:hover::after {
 .navbar-nav li a:hover::after {
   width: 100%;
 }
-
 
 @media screen and (max-width: 1600px) {
   .navbar-expand-lg .navbar-collapse {
@@ -247,7 +220,6 @@ a.nav-link.nav-link-search:hover::after {
   }
 }
 
-
 ._1MxlY::before {
   content: "";
   display: block;
@@ -260,14 +232,7 @@ a.nav-link.nav-link-search:hover::after {
   display: block;
   background: var(--main-color);
   border-radius: 0 0 50% 50%/0 0 100% 100%;
-
   height: 6rem;
-}
-
-.content {
-  height: 1500px;
-
-  margin: -.8rem -2.4rem 0;
 }
 
 .formLogin, .formRegister {
@@ -343,6 +308,5 @@ a.nav-link.nav-link-search:hover::after {
   color: #E95420;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-
 }
 /*# sourceMappingURL=style.css.map */

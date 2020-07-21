@@ -9,6 +9,20 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\String\Slugger\SluggerInterface;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+
+
+
+
+
+
+
+
+
+
+
 
 /**
  * @Route("/user")
@@ -61,16 +75,41 @@ class UserController extends AbstractController
     /**
      * @Route("/{id}/edit", name="user_edit", methods={"GET","POST"})
      */
-    public function edit(Request $request, User $user): Response
+    public function edit(Request $request, User $user ,SluggerInterface $slugger): Response
     {
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
+            $photoUser = $form->get('photoUser')->getData();
+ 
+            if ($photoUser) {
+                $originalFilename = pathinfo($photoUser->getClientOriginalName(), PATHINFO_FILENAME);
+                // ceci est nécessaire pour inclure en toute sécurité le nom de fichier dans l'URL
+                $safeFilename = $slugger->slug($originalFilename);
+                $newFilename = $safeFilename.'-'.uniqid().'.'.$photoUser->guessExtension();
 
-            return $this->redirectToRoute('user_index');
+                try {
+                    $photoUser->move(
+                        $this->getParameter('photos_directory'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {
+                    // ... gérer l'exception si quelque chose se produit pendant le téléchargement du fichier
+                }
+ 
+                // met à jour la propriété 'photoEleve' pour stocker le nom du fichier PDF
+                // au lieu de son contenu
+                $user->setPhotoUser($newFilename);
+            }
+            /** Fin du code à ajouter **/
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($user);
+            $entityManager->flush();
+ 
+            return $this->redirectToRoute('user/edit');
         }
+
 
         return $this->render('user/edit.html.twig', [
             'user' => $user,
