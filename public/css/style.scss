@@ -1,10 +1,18 @@
-:root{
+body {
+
+    color: #FF6E14;
+}
+
+
+:root {
     --main-color: #FF6E14;
 }
+
 
 body {
     color: var(--main-color);
 }
+
 
 ///////////////////////////////////////////NAVBAR//////////////////////////////////////////
 
@@ -61,7 +69,8 @@ li.nav-item {
     height: 60px;
 }
 
-.far, .fas {
+.far,
+.fas {
     font-size: 1.9em;
     color: black;
     margin: auto;
@@ -82,7 +91,7 @@ li.nav-item {
 
 li.nav-search {
     display: flex;
-    align-items: center ;
+    align-items: center;
     margin-left: 15px;
 }
 
@@ -125,6 +134,7 @@ a.nav-link.nav-link-search:hover::after {
     border-radius: 5px;
     transition: width 0.3s;
 }
+
 
 .navbar-nav li a:hover::after {
     width: 100%;
@@ -234,11 +244,107 @@ a.nav-link.nav-link-search:hover::after {
     background: var(--main-color);
     -webkit-border-radius: 0 0 50% 50%/0 0 100% 100%;
     border-radius: 0 0 50% 50%/0 0 100% 100%;
+
     // margin: -.8rem -2.4rem 0;
     height: 6rem;
+
 }
 
-.content {
-    height: 1500px;
+//Loginformulaire
+
+
+.formLogin {
+    border-radius: 4px;
+    border: 1px solid rgb(184, 179, 179);
+    padding: 40px;
+    box-shadow: 0px 0px 16px 1px rgba(119, 119, 119, 0.59);
+    -moz-box-shadow: 0px 0px 16px 1px rgba(119, 119, 119, 0.59);
+    -webkit-box-shadow: 0px 0px 16px 1px rgba(119, 119, 119, 0.59);
 }
+
+.btnLogin {
+    background-color: rgb(65, 131, 215);
+    color: rgb(255, 255, 255);
+    border-color: rgb(65, 131, 215);
+    margin-bottom: 40px;
+    margin-top: 40px;
+
+    &:hover {
+        background-color: rgb(51, 102, 153);
+        text-decoration: none;
+        border-color: rgb(65, 131, 215);
+    }
+}
+
+.formCreateCountLink {
+    color: rgb(65, 131, 215);
+
+    &:hover {
+        color: rgb(51, 102, 153);
+        text-decoration: none;
+    }
+}
+
+//login register
+.formRegister {
+    @extend .formLogin;
+
+}
+
+.btnRegister {
+    @extend .btnLogin;
+}
+
+//Menu Principal User
+
+.UserUtilities {
+    border: 1px solid grey;
+    border-radius: 10px;
+    max-width: 29%;
+    margin-bottom: 2vh;
+}
+
+.UserUtilities2 {
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin-bottom: 2vh;
+
+}
+
+.UserUtilities3 {
+max-width: 29%;
+padding-right: 0px;
+padding-left: 0px;
+}
+
+.UserUtilities4 {
+    border: 1px solid grey;
+    border-radius: 10px;
+    max-width: 100%;
+    
+   
+}
+.btnPrincipal{
+    &:hover {
+        color: #E95420;
+        transform:scale(1.05);
+    }
+
+}
+
+
+#homeUser  {
+
+    a {
+        text-decoration: none;
+        transition: all 0.3s ease;
+        &:hover {
+            color: #E95420;
+            transform:scale(1.05);
+        }
+    }
+}
+
+
+
 // @media screen and (max-width: 970px) {}

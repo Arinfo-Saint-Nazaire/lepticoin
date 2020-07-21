@@ -1,20 +1,37 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello FaqController!{% endblock %}
+{% block title %}Faq index{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <h1>Index F.A.Q.</h1>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Question</th>
+                <th>Réponse</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for faq in faqs %}
+            <tr>
+                <td>{{ faq.id }}</td>
+                <td>{{ faq.question }}</td>
+                <td>{{ faq.answer }}</td>
+                <td>
+                    <a href="{{ path('faq_show', {'id': faq.id}) }}">Afficher</a>
+                    <a href="{{ path('faq_edit', {'id': faq.id}) }}">Editer</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">Aucune donnée trouvée</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/wamp/www/lepticoin/src/Controller/FaqController.php'|file_link(0) }}">src/Controller/FaqController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/wamp/www/lepticoin/templates/faq/index.html.twig'|file_link(0) }}">templates/faq/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <a href="{{ path('faq_new') }}">Créer une nouvelle donnée</a>
 {% endblock %}
