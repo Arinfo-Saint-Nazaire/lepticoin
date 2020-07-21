@@ -8,10 +8,15 @@ body {
     --main-color: #FF6E14;
 }
 
+
+body {
+    color: var(--main-color);
+}
+
+
 ///////////////////////////////////////////NAVBAR//////////////////////////////////////////
 
 .topbar {
-    position: fixed;
     background-color: #fff;
     box-shadow: 0 3px 5px rgba(131, 50, 50, 0.15);
     height: 67px;
@@ -42,18 +47,18 @@ body {
     background-color: var(--main-color);
     white-space: nowrap;
     margin-left: 5px;
-    padding-right: 20px;
+    padding-right: 30px;
     font-weight: 500;
 }
 
-.pass_an_ad_icon {
+button img.pass_an_ad_icon1 {
     width: 14%;
     height: 14%;
-    background-color: black;
 }
 
-.pass_an_ad_icon:hover {
-    background-color: black;
+i.fa-search {
+    font-size: 1.5rem;
+    margin-bottom: 6px;
 }
 
 // links
@@ -72,6 +77,10 @@ li.nav-item {
     margin-bottom: 0;
 }
 
+.fa-responsive {
+    display: none;
+}
+
 .navbar-light .navbar-nav .nav-link {
     font-family: "Open sans", Arial, sans-serif;
     color: black;
@@ -84,6 +93,16 @@ li.nav-search {
     display: flex;
     align-items: center;
     margin-left: 15px;
+}
+
+a.nav-link.nav-link-search::after {
+    margin-top: 11px;
+    left: 30%;
+    transform: translateX(-50%);
+}
+
+a.nav-link.nav-link-search:hover::after {
+    width: 125%;
 }
 
 .navbar-nav li a {
@@ -105,11 +124,11 @@ li.nav-search {
     content: "";
     display: block;
     position: absolute;
-    margin-top: 6px;
+    margin-top: 5px;
     margin-bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
-    height: 3px;
+    height: 4px;
     width: 0%;
     background-color: var(--main-color);
     border-radius: 5px;
@@ -121,6 +140,95 @@ li.nav-search {
     width: 100%;
 }
 
+@media screen and (max-width: 1600px) {
+    .navbar-expand-lg .navbar-collapse {
+        margin-right: -150px;
+    }
+    .navbar {
+        min-width: 70%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .navbar-expand-lg .navbar-collapse {
+        margin-right: -50px;
+    }
+    .navbar {
+        min-width: 90%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .navbar {
+        min-width: 90%;
+    }
+    li.nav-search {
+        margin-bottom: 10px;
+    }
+    .navbar-light .navbar-toggler {
+        border-color: #fff;
+    }
+    .navbar-light .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='10 2 10 27'><path stroke='rgba(255, 110, 20)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='4' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+    }
+    .fa-responsive {
+        display: block;
+    }
+    .navbar {
+        padding: 0.5rem 0;
+    }
+    .navbar-brand {
+        margin-right: 0;
+    }
+    .fa-responsive {
+        color: #FF6E14;
+        font-size: 1.5em;
+    }
+    ._1MxlY {
+        display: none;
+    }
+    .btn-pass_an_ad {
+        margin-top: 20px;
+        color: #000;
+        background-color: #fff;
+        border: none;
+        height: 37px;
+        border-radius: 10px;
+        width: 100%;
+        text-align: left;
+    }
+    .btn-pass_an_ad:hover {
+        color: #000;
+        background-color: rgba(255, 110, 20,.1);
+        border: none;
+    }
+    button.pass_an_ad_icon1 {
+        color: #000;
+        background-color: #fff;
+    }
+    li.nav-item,
+    li.nav-search,
+    li a.nav-search {
+        display: flex;
+        align-items: flex-end;
+        height: 2rem;
+        padding-bottom: 3px;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+    li.nav-item:hover,
+    li.nav-search:hover,
+    li a.nav-search:hover {
+        background-color: rgba(255, 110, 20,.15);
+    }
+    // li a.nav-link {
+        
+    //  }
+    .navbar-nav li a::after {
+        display: none;
+    }
+}
+
 ///////////////////////////////////////////NAVBAR//////////////////////////////////////////
 
 ._1MxlY::before {
@@ -130,15 +238,16 @@ li.nav-search {
     height: 9rem;
 }
 
-
 ._1MxlY::after {
     content: "";
     display: block;
     background: var(--main-color);
     -webkit-border-radius: 0 0 50% 50%/0 0 100% 100%;
     border-radius: 0 0 50% 50%/0 0 100% 100%;
-    margin: -.8rem -2.4rem 0;
-    height: 8rem;
+
+    // margin: -.8rem -2.4rem 0;
+    height: 6rem;
+
 }
 
 //Loginformulaire
@@ -179,6 +288,7 @@ li.nav-search {
 //login register
 .formRegister {
     @extend .formLogin;
+
 }
 
 .btnRegister {
