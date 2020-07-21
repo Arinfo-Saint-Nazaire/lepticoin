@@ -16,4 +16,6 @@ class FaqController extends AbstractController
             'controller_name' => 'FaqController',
         ]);
     }
+
+    
 }
