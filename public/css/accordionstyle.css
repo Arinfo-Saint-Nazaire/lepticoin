@@ -2,12 +2,14 @@
   border: 1px solid black;
   background: #FF6E14;
   font-weight: normal;
-  color: #ffffff; }
+  color: #ffffff;
+}
 
 ._1MxlY::before {
-  display: none; }
+  display: none;
+}
 
 ._1MxlY::after {
-  display: none; }
-
+  display: none;
+}
 /*# sourceMappingURL=accordionstyle.css.map */

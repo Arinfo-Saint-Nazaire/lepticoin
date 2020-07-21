@@ -58,7 +58,8 @@ li.nav-item {
   height: 60px;
 }
 
-.far, .fas {
+.far,
+.fas {
   font-size: 1.9em;
   color: black;
   margin: auto;
@@ -171,6 +172,7 @@ li.nav-search {
   border: 1px solid grey;
   border-radius: 10px;
   max-width: 29%;
+  margin-bottom: 2vh;
 }
 
 .UserUtilities2 {
@@ -180,7 +182,32 @@ li.nav-search {
 }
 
 .UserUtilities3 {
+  max-width: 29%;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.UserUtilities4 {
   border: 1px solid grey;
   border-radius: 10px;
+  max-width: 100%;
+}
+
+.btnPrincipal:hover {
+  color: #E95420;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+#homeUser a {
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#homeUser a:hover {
+  color: #E95420;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 /*# sourceMappingURL=style.css.map */

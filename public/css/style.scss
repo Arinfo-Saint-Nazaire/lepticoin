@@ -177,35 +177,64 @@ li.nav-search {
 }
 
 //login register
-.formRegister{
+.formRegister {
     @extend .formLogin;
 }
-.btnRegister{
+
+.btnRegister {
     @extend .btnLogin;
 }
 
 //Menu Principal User
 
-.UserUtilities{
- border: 1px solid grey;
- border-radius: 10px;
-max-width: 29%;
-margin-bottom: 2vh;
+.UserUtilities {
+    border: 1px solid grey;
+    border-radius: 10px;
+    max-width: 29%;
+    margin-bottom: 2vh;
+}
 
-.UserUtilities2{
+.UserUtilities2 {
     border: 1px solid grey;
     border-radius: 10px;
     margin-bottom: 2vh;
 
 }
 
-.UserUtilities3{
+.UserUtilities3 {
+max-width: 29%;
+padding-right: 0px;
+padding-left: 0px;
+}
+
+.UserUtilities4 {
     border: 1px solid grey;
     border-radius: 10px;
+    max-width: 100%;
+    
+   
+}
+.btnPrincipal{
+    &:hover {
+        color: #E95420;
+        transform:scale(1.05);
+    }
+
+}
+
+
+#homeUser  {
+
+    a {
+        text-decoration: none;
+        transition: all 0.3s ease;
+        &:hover {
+            color: #E95420;
+            transform:scale(1.05);
+        }
+    }
 }
 
 
 
-
 // @media screen and (max-width: 970px) {}
-
