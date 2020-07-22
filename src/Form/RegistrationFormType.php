@@ -18,6 +18,7 @@ class RegistrationFormType extends AbstractType
     {
         $builder
             ->add('pseudoUser')
+            ->add('registrationDateUser')
             ->add('email')
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
@@ -26,6 +27,7 @@ class RegistrationFormType extends AbstractType
                         'message' => 'You should agree to our terms.',
                     ]),
                 ],
+
             ])
             ->add('plainPassword', PasswordType::class, [
                 // instead of being set onto the object directly,

@@ -1,3 +1,4 @@
+
 :root {
     --main-color: #FF6E14;
 }
@@ -5,7 +6,9 @@
 ///////////////////////////////////////////NAVBAR//////////////////////////////////////////
 
 .topbar {
-    position: relative;
+
+    position: fixed;
+
     background-color: #fff;
     box-shadow: 0 3px 5px rgba(131, 50, 50, 0.15);
     height: 60px;
@@ -40,20 +43,26 @@
     background-color: var(--main-color);
     white-space: nowrap;
     margin-left: 5px;
-    padding-right: 30px;
+    padding-right: 20px;
     font-weight: 500;
 }
 
-button img.pass_an_ad_icon1 {
+.pass_an_ad_icon {
     width: 14%;
     height: 14%;
+    background-color: black;
 }
+
 
 i.fa-search {
     font-size: 1.6rem;
     margin-bottom: 10px;
     margin-left: 0px;
     margin-right: 15px;
+
+.pass_an_ad_icon:hover {
+    background-color: black;
+
 }
 
 // links
@@ -73,10 +82,6 @@ li.nav-item {
     margin-bottom: 0;
 }
 
-.fa-responsive {
-    display: none;
-}
-
 .navbar-light .navbar-nav .nav-link {
     font-family: "Open sans", Arial, sans-serif;
     color: black;
@@ -91,6 +96,7 @@ li.nav-search {
     margin-left: 15px;
 }
 
+
 a.nav-link.nav-link-search::after {
     margin-top: 5px;
     left: 50%;
@@ -101,6 +107,7 @@ a.nav-link.nav-link-search:hover::after {
     width: 95%;
 }
 
+r
 .navbar-nav li a {
     display: block;
     position: relative;
@@ -120,11 +127,13 @@ a.nav-link.nav-link-search:hover::after {
     content: "";
     display: block;
     position: absolute;
+
     margin-top: 2px;
+
     margin-bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
-    height: 4px;
+    height: 3px;
     width: 0%;
     background-color: var(--main-color);
     border-radius: 5px;
@@ -135,6 +144,7 @@ a.nav-link.nav-link-search:hover::after {
 .navbar-nav li a:hover::after {
     width: 100%;
 }
+
 
 @media screen and (max-width: 1600px) {
     .navbar-expand-lg .navbar-collapse {
@@ -262,6 +272,7 @@ a.nav-link.nav-link-search:hover::after {
     }
 }
 
+
 ///////////////////////////////////////////NAVBAR//////////////////////////////////////////
 /////////////////////////////////////////ORANGE_BANNER/////////////////////////////////////
 
@@ -272,6 +283,7 @@ a.nav-link.nav-link-search:hover::after {
     height: 5rem;
     position: relative;
 }
+
 
 ._1MxlY::after {
     content: "";
@@ -319,65 +331,97 @@ a.nav-link.nav-link-search:hover::after {
 }
 
 //login register
-.formRegister {
+.formRegister{
     @extend .formLogin;
-
 }
-
-.btnRegister {
+.btnRegister{
     @extend .btnLogin;
 }
 
-//Menu Principal User
-
-.UserUtilities {
-    border: 1px solid grey;
-    border-radius: 10px;
-    max-width: 29%;
-    margin-bottom: 2vh;
+.content {
+    height: 1500px;
 }
 
-.UserUtilities2 {
-    border: 1px solid grey;
-    border-radius: 10px;
-    margin-bottom: 2vh;
+// ///////////////////////////////////// Vincent /////////////////////////////////////
 
-}
+.bonus-v {
+    text-align: center;
 
-.UserUtilities3 {
-max-width: 29%;
-padding-right: 0px;
-padding-left: 0px;
-}
-
-.UserUtilities4 {
-    border: 1px solid grey;
-    border-radius: 10px;
-    max-width: 100%;
-    
-   
-}
-.btnPrincipal{
-    &:hover {
-        color: #E95420;
-        transform:scale(1.05);
-    }
-
-}
-
-
-#homeUser  {
-
-    a {
-        text-decoration: none;
-        transition: all 0.3s ease;
-        &:hover {
-            color: #E95420;
-            transform:scale(1.05);
-        }
+    img {
+        margin: auto;
     }
 }
 
+//legalnotice & rgpd
+
+.legalnoticetext, .rgpdtext, .faqtext, .noticetext {
+    color: black;
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 80px;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    p, li {
+        font-size: 0.8rem;
+    }
+
+    h2 {
+        text-align: center;
+        margin-top: 80px;
+    }
+}
+
+.example-wrapper {
+    margin: 1em auto;
+    max-width: 800px;
+    width: 95%;
+    font: 18px/1.5 sans-serif;
+}
+
+.example-wrapper code {
+    background: #F5F5F5;
+    padding: 2px 6px;
+}
+
+//footer
+
+footer {
+    background-color: rgb(77, 75, 75);
+    color: white;
+
+    h3 {
+        font-size: 1.25rem;
+        margin-top: 20px;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    hr {
+        background-color: white;
+        max-width: 800px;
+    }
+
+    .footer {
+        max-width: 830px;
+        margin: auto;
+    }
+
+    .lepticoin-footer {
+        text-align: center;
+    }
+
+    .arinfo {
+        padding-left: 15px;
+        padding-bottom: 60px;
+    }
 
 /////////////////////////////////////HOME/INDEX.HTML.TWIG//////////////////////////////
 
@@ -403,3 +447,13 @@ padding-left: 0px;
 }
 
 /////////////////////////////////////HOME/INDEX.HTML.TWIG//////////////////////////////
+    .logo-arinfo {
+        float: right;
+        padding-right: 15px;
+    }
+}
+
+// @media screen and (max-width: 970px) {}
+
+// ///////////////////////////////////// Fin Vincent /////////////////////////////////////
+

@@ -1,47 +1,49 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8"/>
-		<meta
-		name="viewport" content="width=device-width, initial-scale=1"/>
-		{# //Font #}
-		<link
-		rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-		{# lien vers le template Bootswatch "United" #}
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/united/bootstrap.min.css" integrity="sha384-Uga2yStKRHUWCS7ORqIZhJ9LIAv4i7gZuEdoR1QAmw6H+ffhcf7yCOd0CvSoNwoz" crossorigin="anonymous">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		{# bootstrap #}
-		<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-		<link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet"/>
-		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" />
-		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-		{# fonts #}
-        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-		{# lien vers style css #}
-		<link rel="stylesheet" href="{{asset("css/style.css")}}">
-		{# lien vers datatables js #}
-		<script  src="{{asset("js/script.js")}}"> </script>
-		<link rel="SHORTCUT ICON" href="{{asset('icons/tab_icon.ico')}}">
 
 
 
-    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"/>
-		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-    <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet"/>
-		<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"> {# lien vers style css #}
-		<link rel="stylesheet" href="{{asset("css/style.css")}}">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+		integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/united/bootstrap.min.css"
+		integrity="sha384-Uga2yStKRHUWCS7ORqIZhJ9LIAv4i7gZuEdoR1QAmw6H+ffhcf7yCOd0CvSoNwoz" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{{asset("css/accordionstyle.css")}}">
+	<link rel="stylesheet" href="{{asset("css/style.css")}}">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-		<script src="{{asset("js/script.js")}}"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="{{asset("js/script.js")}}"></script>
+	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+	
+	<title>
+		{% block title %}Lepticoin des bonnes affaires!
+		{% endblock %}
+	</title>
+	{% block stylesheets %}{% endblock %}
+</head>
 
-		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-		<script>
-			$(function () {
-$("#accordion").accordion();
-});
-		</script>
+<body>
+	<div class="container-fluid topbar fixed-top">
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+				aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<a class="navbar-brand" href="{{path('home')}}">Lepticoin</a>
+			<div>
+				<a href="#"><i class="fas fa-search fa-responsive"></i></i></a>
+			</div>
+
 
 		<title>
 			{% block title %}Welcome!
@@ -131,10 +133,58 @@ $("#accordion").accordion();
         <div class="_3ULE3" >
             <div class=" _1MxlY" ></div>
         </div>
-		{% block body %}{% endblock %}
-		{% block javascripts %}{% endblock %}
-		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+	{% block body %}{% endblock %}
+
+
+	<footer>
+		<div class="row footer">
+			<div class="col-md-4">
+				<h3>A propos de Leptitcoin</h3>
+				<hr />
+				<p>Qui sommes-nous ?</p>
+				<p>Nous rejoindre</p>
+				<h3>Nos applications</h3>
+				<hr />
+			</div>
+			<div class="col-md-4">
+				<h3>Informations légales</h3>
+				<hr />
+				<p><a href="{{ path('legalNotice') }}">Conditions générales d’utilisation</a></p>
+				<p>Règles de diffusion, de référencement et de déréférencement</p>
+				<p>Conditions Générales de Vente</p>
+				<p><a href="{{ path('rgpd') }}">Vie privée / cookies</a></p>
+				<p>Vos droits et obligations</p>
+			</div>
+			<div class="col-md-4">
+				<h3>Des questions ?</h3>
+				<hr />
+				<p><a href="{{ path('faq_public') }}">Aide</a></p>
+				<p>Le service de paiement sécurisé et la livraison</p>
+				<p>Demandez conseil à la Communauté</p>
+			</div>
+		</div>
+		<hr />
+		<p class="footer lepticoin-footer">Lepticoin : exercice de production d'un site type "Leboncoin" dans le
+			cadre de la formation "développeur web et web mobile"</p>
+		<hr />
+		<p class="footer arinfo">Arinfo (juillet 2020)
+			<img src="{{ asset('images/logo-arinfo.jpg') }}" width="200" alt="logo Arinfo" class="logo-arinfo"></p>
+	</footer>
+
+	{% block javascripts %}{% endblock %}
+</body>
+
+
+	{# <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+	integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+	</script> #}
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+	</script>
 	</body>
+
 </html>

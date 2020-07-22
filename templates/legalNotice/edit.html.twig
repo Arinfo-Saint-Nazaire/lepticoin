@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier les mentions légales{% endblock %}
+
+{% block body %}
+    <h1>Modifier les mentions légales</h1>
+
+    {{ include('legal_notice/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('legal_notice_index') }}">Retour à la liste</a>
+
+    {{ include('legal_notice/_delete_form.html.twig') }}
+{% endblock %}

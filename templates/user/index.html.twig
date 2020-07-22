@@ -1,30 +1,30 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}User index{% endblock %}
+{% block title %}Index des utilisateurs{% endblock %}
 
 {% block body %}
-    <h1>User index</h1>
+    <h1>Index des utilisateurs</h1>
 
     <table class="table" id="myTable">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Email</th>
-                <th>Roles</th>
-                <th>Password</th>
-                <th>IsVerified</th>
-                <th>FirstNameUser</th>
-                <th>LastNameUser</th>
-                <th>PhotoUser</th>
-                <th>BirthdayDateUser</th>
-                <th>PhoneUser</th>
-                <th>AdressUser</th>
-                <th>CityUser</th>
-                <th>PostalCodeUser</th>
-                <th>CivilityUser</th>
-                <th>RegistrationDateUser</th>
-                <th>PseudoUser</th>
-                <th>actions</th>
+                <th>Rôle</th>
+                <th>Mot de passe</th>
+                <th>Vérifié</th>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Photo de profil</th>
+                <th>Date d'anniversaire</th>
+                <th>Téléphone</th>
+                <th>Adresse</th>
+                <th>Ville</th>
+                <th>Code Postal</th>
+                <th>Civilité</th>
+                <th>Date d'enregistrement</th>
+                <th>Pseudo</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -47,17 +47,17 @@
                 <td>{{ user.registrationDateUser ? user.registrationDateUser|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ user.pseudoUser }}</td>
                 <td>
-                    <a href="{{ path('user_show', {'id': user.id}) }}">show</a>
-                    <a href="{{ path('user_edit', {'id': user.id}) }}">edit</a>
+                    <a href="{{ path('user_show', {'id': user.id}) }}">Montrer</a>
+                    <a href="{{ path('user_edit', {'id': user.id}) }}">Modifier</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="17">no records found</td>
+                <td colspan="17">Aucune donnée trouvée</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('user_new') }}">Create new</a>
+    <a href="{{ path('user_new') }}">Créer un nouvel utilisateur</a>
 {% endblock %}

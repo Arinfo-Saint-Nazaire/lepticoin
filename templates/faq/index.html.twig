@@ -3,7 +3,9 @@
 {% block title %}Faq index{% endblock %}
 
 {% block body %}
-    <h1>Index F.A.Q.</h1>
+<div class="example-wrapper legalnoticetext">
+
+    <h2>Index F.A.Q.</h2>
 
     <table class="table">
         <thead>
@@ -15,7 +17,7 @@
             </tr>
         </thead>
         <tbody>
-        {% for faq in faqs %}
+            {% for faq in faqs %}
             <tr>
                 <td>{{ faq.id }}</td>
                 <td>{{ faq.question }}</td>
@@ -25,13 +27,14 @@
                     <a href="{{ path('faq_edit', {'id': faq.id}) }}">Editer</a>
                 </td>
             </tr>
-        {% else %}
+            {% else %}
             <tr>
                 <td colspan="4">Aucune donnée trouvée</td>
             </tr>
-        {% endfor %}
+            {% endfor %}
         </tbody>
     </table>
 
     <a href="{{ path('faq_new') }}">Créer une nouvelle donnée</a>
+</div>
 {% endblock %}
