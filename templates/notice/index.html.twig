@@ -3,7 +3,8 @@
 {% block title %}Notice index{% endblock %}
 
 {% block body %}
-    <h1>Notice index</h1>
+<div class="noticetext">
+    <h2>Index des annonces</h2>
 
     <table class="table" id="myTable">
         <thead>
@@ -17,12 +18,12 @@
                 <th>Photo 2</th>
                 <th>Photo 3</th>
                 <th>Date</th>
-                <th>Catégorie Professionnelle</th>
+                <th>Catégorie professionnelle</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-        {% for notice in notices %}
+            {% for notice in notices %}
             <tr>
                 <td>{{ notice.id }}</td>
                 <td>{{ notice.titleNotice }}</td>
@@ -33,19 +34,20 @@
                 <td><img src="{{ notice.photoTwoNotice | raw}}" alt="photoTwoNotice"></td>
                 <td><img src="{{ notice.photothreeNotice | raw}}" alt="photothreeNotice"></td>
                 <td>{{ notice.dateNotice ? notice.dateNotice|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ notice.categoryProfessionnalNotice ? 'Yes' : 'No' }}</td>
+                <td>{{ notice.categoryProfessionnalNotice ? 'Oui' : 'Non' }}</td>
                 <td>
                     <a href="{{ path('notice_show', {'id': notice.id}) }}">Montrer</a>
                     <a href="{{ path('notice_edit', {'id': notice.id}) }}">Modifier</a>
                 </td>
             </tr>
-        {% else %}
+            {% else %}
             <tr>
                 <td colspan="11">Aucune donnée trouvée</td>
             </tr>
-        {% endfor %}
+            {% endfor %}
         </tbody>
     </table>
 
     <a href="{{ path('notice_new') }}">Créer une nouvelle annonce</a>
+</div>
 {% endblock %}

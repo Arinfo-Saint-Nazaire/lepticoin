@@ -14,8 +14,8 @@ class NoticeFixtures extends Fixture
             $Notice = new Notice();
             $Notice->setTitleNotice("Annonce n°$i")
                 ->setPriceNotice(99)
-                ->setDescriptionNotice("<p>Description n°$i</p>")
-                ->setLocationNotice("<p>Lieu n°$i</p>")
+                ->setDescriptionNotice("Description n°$i")
+                ->setLocationNotice("Lieu n°$i")
                 ->setPhotoOneNotice("http://placehold.it/100x75")
                 ->setPhotoTwoNotice("http://placehold.it/100x75")
                 ->setPhotoThreeNotice("http://placehold.it/100x75")

@@ -176,21 +176,39 @@ li.nav-search {
   margin: auto;
 }
 
-.legalnoticetext, .rgpdtext, .faqtext {
+.legalnoticetext, .rgpdtext, .faqtext, .noticetext {
   color: black;
 }
 
-.legalnoticetext h2, .rgpdtext h2, .faqtext h2 {
+.legalnoticetext h2, .rgpdtext h2, .faqtext h2, .noticetext h2 {
   text-align: center;
   font-size: 2rem;
+  margin-top: 80px;
 }
 
-.legalnoticetext h3, .rgpdtext h3, .faqtext h3 {
+.legalnoticetext h3, .rgpdtext h3, .faqtext h3, .noticetext h3 {
   font-size: 1.25rem;
 }
 
-.legalnoticetext p, .legalnoticetext li, .rgpdtext p, .rgpdtext li, .faqtext p, .faqtext li {
+.legalnoticetext p, .legalnoticetext li, .rgpdtext p, .rgpdtext li, .faqtext p, .faqtext li, .noticetext p, .noticetext li {
   font-size: 0.8rem;
+}
+
+.legalnoticetext h2, .rgpdtext h2, .faqtext h2, .noticetext h2 {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.example-wrapper {
+  margin: 1em auto;
+  max-width: 800px;
+  width: 95%;
+  font: 18px/1.5 sans-serif;
+}
+
+.example-wrapper code {
+  background: #F5F5F5;
+  padding: 2px 6px;
 }
 
 footer {

@@ -195,12 +195,13 @@ li.nav-search {
 
 //legalnotice & rgpd
 
-.legalnoticetext, .rgpdtext, .faqtext {
+.legalnoticetext, .rgpdtext, .faqtext, .noticetext {
     color: black;
 
     h2 {
         text-align: center;
         font-size: 2rem;
+        margin-top: 80px;
     }
 
     h3 {
@@ -210,6 +211,23 @@ li.nav-search {
     p, li {
         font-size: 0.8rem;
     }
+
+    h2 {
+        text-align: center;
+        margin-top: 80px;
+    }
+}
+
+.example-wrapper {
+    margin: 1em auto;
+    max-width: 800px;
+    width: 95%;
+    font: 18px/1.5 sans-serif;
+}
+
+.example-wrapper code {
+    background: #F5F5F5;
+    padding: 2px 6px;
 }
 
 //footer
