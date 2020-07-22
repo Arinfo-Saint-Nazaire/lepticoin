@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Login le Pticoin
+{% block title %}Connexion à Lepticoin
 {% endblock %}
 
 {% block body %}
@@ -13,12 +13,12 @@
 					{% endif %}
 					{% if app.user %}
 						<div class="mb-3">
-							You are logged in as
+							Vous êtes connecté(e) en tant que : 
 							{{ app.user.username }},
-							<a href="{{ path('app_logout') }}">Logout</a>
+							<a href="{{ path('app_logout') }}">Déconnexion</a>
 						</div>
 					{% endif %}
-					<h1 class="h3 mb-3 font-weight-normal text-center">Bonjour!</h1>
+					<h1 class="h3 mb-3 font-weight-normal text-center">Bonjour !</h1>
                     <p class=" mb-3 font-weight-normal text-center">Connectez-vous pour découvrir toutes nos fonctionnalités.</p>
 					<label for="inputEmail">E-mail</label>
 					<input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>

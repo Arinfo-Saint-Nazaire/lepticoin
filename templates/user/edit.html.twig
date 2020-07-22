@@ -1,10 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit User
+{% block title %}Modifier son profil utilisateur
 {% endblock %}
 
 {% block body %}
-	<h1 class="text-center">Modifier Son profil utilisateur</h1>
+	<h1 class="text-center">Modifier son profil utilisateur</h1>
 	<div class="container  ">
 		<div class="row justify-content-xl-center justify-content-md-center justify-content-sm-center">
 			<div class="col-xl-5 col-lg-5 col-md-8 col-sm-12 formLogin">
@@ -25,7 +25,7 @@
 						<input type="text" value="{{user.lastNameUser}}" class="form-control">
 						<label for="">Modifier ma date d'anniversaire</label>
 						<input type="date" value="{{ user.birthdayDateUser ? user.birthdayDateUser|date('Y-m-d') : '' }}" class="form-control">
-						<label for="">Modifier mon numéro de télephone</label>
+						<label for="">Modifier mon numéro de téléphone</label>
 						<input type="text" value="{{ user.phoneUser }}" class="form-control">
 						<label for="">Modifier mon adresse</label>
 						<input type="text" value="{{ user.adressUser }}" class="form-control">
@@ -50,13 +50,13 @@
 		<td>{{ user.civilityUser ? 'Yes' : 'No' }}</td>
 		<td>{{ user.pseudoUser }}</td>
 		<td>
-			<a href="{{ path('user_show', {'id': user.id}) }}">show</a>
-			<a href="{{ path('user_edit', {'id': user.id}) }}">edit</a>
+			<a href="{{ path('user_show', {'id': user.id}) }}">Montrer</a>
+			<a href="{{ path('user_edit', {'id': user.id}) }}">Modifier</a>
 		</td>
 	</tr>
 
 
-	<a href="{{ path('user_index') }}">back to list</a>
+	<a href="{{ path('user_index') }}">Retour à la liste</a>
 
 	{{ include('user/_delete_form.html.twig') }}
 {% endblock %}

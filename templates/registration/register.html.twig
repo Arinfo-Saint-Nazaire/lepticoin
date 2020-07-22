@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}Répertoire{% endblock %}
 
 {% block body %}
     {% for flashError in app.flashes('verify_email_error') %}
@@ -15,9 +15,9 @@
         {{ form_row(registrationForm.pseudoUser,{'label': 'Votre pseudo','attr': {'class': 'formRegistrationinput form-control'}})}}
         {{ form_row(registrationForm.email, { 'label': 'Votre E-mail','attr': {'class': 'formRegistrationinput form-control'}} )}}
         {{ form_row(registrationForm.plainPassword, { 'label': 'Votre mot de passe','attr': {'class': 'formRegistrationinput form-control'}}) }}
-        {{ form_row(registrationForm.agreeTerms, {label: 'j\'accepte de recevoir des trucs inutiles par mail'} ) }}
+        {{ form_row(registrationForm.agreeTerms, {label: 'J\'accepte de recevoir des trucs inutiles par mail'} ) }}
 <p>En créant mon compte je reconnais avoir lu et accepté  <a href="">les Conditions Générales de Vente</a> et <a href="">les Conditions Générales d‘Utilisation</a> , et je confirme être âgé d’au moins 18 ans.</p>
-        <button type="submit" class="btn btn-primary btn-lg btn-block btnRegister">vous enregistrer</button>
+        <button type="submit" class="btn btn-primary btn-lg btn-block btnRegister">Vous enregistrer</button>
     {{ form_end(registrationForm) }}
     	</div>
 		</div>
