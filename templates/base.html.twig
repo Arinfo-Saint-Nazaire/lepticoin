@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="UTF-8"/>
 		<meta
-		charset="UTF-8">
-		<!-- script js -->
-        <script src="https://kit.fontawesome.com/dc423ef783.js" crossorigin="anonymous"></script>
+		name="viewport" content="width=device-width, initial-scale=1"/>
+		{# //Font #}
+		<link
+		rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 		{# lien vers le template Bootswatch "United" #}
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/united/bootstrap.min.css" integrity="sha384-Uga2yStKRHUWCS7ORqIZhJ9LIAv4i7gZuEdoR1QAmw6H+ffhcf7yCOd0CvSoNwoz" crossorigin="anonymous">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -21,6 +23,26 @@
 		{# lien vers datatables js #}
 		<script  src="{{asset("js/script.js")}}"> </script>
 		<link rel="SHORTCUT ICON" href="{{asset('icons/tab_icon.ico')}}">
+
+
+
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css"/>
+		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet"/>
+		<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"> {# lien vers style css #}
+		<link rel="stylesheet" href="{{asset("css/style.css")}}">
+
+		<script src="{{asset("js/script.js")}}"></script>
+
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script>
+			$(function () {
+$("#accordion").accordion();
+});
+		</script>
+
 		<title>
 			{% block title %}Welcome!
 			{% endblock %}
@@ -67,6 +89,7 @@
 							<a class="nav-link" href="#">Se connecter</a>
 						</li>
 					</ul>
+
 				</div>
 			</nav>
 			<div>
@@ -108,13 +131,14 @@
         <div class="_3ULE3" >
             <div class=" _1MxlY" ></div>
         </div>
+
 		<div class="content">
 			<p>hello !</p>
 		</div>
 		{% block body %}{% endblock %}
 		{% block javascripts %}{% endblock %}
 		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	</body>
 </html>

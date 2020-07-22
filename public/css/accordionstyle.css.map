@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,gBAAgB,CAAC;EAChB,MAAM,EAAE,eAAe;EACvB,UAAU,EAAE,OAAO;EACnB,WAAW,EAAE,MAAM;EACnB,KAAK,EAAE,OAAO;CACd;;AAED,AAAA,OAAO,AAAA,QAAQ,CAAC;EACZ,OAAO,EAAE,IAAI;CAChB;;AAED,AAAA,OAAO,AAAA,OAAO,CAAC;EACX,OAAO,EAAE,IAAI;CAChB",
+    "sources": [
+        "accordionstyle.scss"
+    ],
+    "names": [],
+    "file": "accordionstyle.css"
+}

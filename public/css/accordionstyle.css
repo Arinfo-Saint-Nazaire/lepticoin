@@ -1,0 +1,15 @@
+.ui-state-active {
+  border: 1px solid black;
+  background: #FF6E14;
+  font-weight: normal;
+  color: #ffffff;
+}
+
+._1MxlY::before {
+  display: none;
+}
+
+._1MxlY::after {
+  display: none;
+}
+/*# sourceMappingURL=accordionstyle.css.map */

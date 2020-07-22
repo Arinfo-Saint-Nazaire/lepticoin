@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}compte accueil
+{% endblock %}
+{% block body %}
+	<div class="container" id="homeUser">
+		<div class="row ">
+			<div class="col-xl-12  UserUtilities2">
+				<div class="row">
+					<div class="col-xl-6 ">
+						<i class="far fa-grin m-4"></i>
+						<h5 ="align-baseline">Gwendal Bescont</h5>
+					</div>
+					<div class="col-xl-6 ">
+						<a href=" {{path('user_index')}} "><button class=" float-right btn btn-primary btn-lg  " type="submit">
+						Voir mon profil public </button></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-between ">
+			<a class="col-xl-4   UserUtilities" href="#">
+				<div>
+					<i class="far fa-file-alt m-4"></i>
+					<h5>annonces</h5>
+					<p>Gérer mes annonces déposées</p>
+				</div>
+			</a>
+			<a class="col-xl-4  UserUtilities" href="#">
+				<div>
+					<i class="fas fa-euro-sign m-4"></i>
+					<h5>Transactions</h5>
+					<p>Suivre mes achats et mes ventes</p>
+				</div>
+			</a>
+			<a class="col-xl-4  UserUtilities" href="#">
+				<div>
+					<i class="fas fa-umbrella m-4"></i>
+					<h5>Réservation de vacances</h5>
+					<p>Contacter mon hôte et retrouver toutes mes réservations</p>
+				</div>
+			</a>
+		</div>
+		<div class="row justify-content-between">
+			<a class="col-xl-4 UserUtilities" href="#">
+				<div>
+					<i class="far fa-user-circle m-4"></i>
+					<h5>Profil</h5>
+					<p>Modifier mon profil public, accéder à mes recommandations et à l’espace candidat</p>
+				</div>
+			</a>
+
+			<a class="col-xl-4 UserUtilities" href="#">
+				<div>
+					<i class="fas fa-cogs m-4"></i>
+					<h5>Paramètres</h5>
+					<p>Compléter et modifier mes informations privées et préférences</p>
+				</div>
+			</a>
+			<div class="col-xl-4 UserUtilities3">
+
+				<a class="col-xl-12 btnPrincipal" href="#">
+					<div class="UserUtilities4">
+						<i class="fas fa-coins m-3"></i>
+						acheter des crédits
+					</div>
+				</a>
+				<a class="col-xl-12 btnPrincipal " href="#">
+					<div class=" UserUtilities4">
+						<i class="fas fa-question m-3"></i>
+						aide
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="row">
+			<a class="col-xl-4 UserUtilities" href="#">
+				<div>
+					Communauté le Pticoin
+				</div>
+			</a>
+		{% endblock %}
