@@ -263,12 +263,14 @@ a.nav-link.nav-link-search:hover::after {
 }
 
 ///////////////////////////////////////////NAVBAR//////////////////////////////////////////
+/////////////////////////////////////////ORANGE_BANNER/////////////////////////////////////
 
 ._1MxlY::before {
     content: "";
     display: block;
     background: var(--main-color);
     height: 5rem;
+    position: relative;
 }
 
 ._1MxlY::after {
@@ -280,16 +282,7 @@ a.nav-link.nav-link-search:hover::after {
     height: 8rem;
 }
 
-.content {
-    height: 1500px;
-}
-    border-radius: 0 0 50% 50%/0 0 100% 100%;
-
-    // margin: -.8rem -2.4rem 0;
-    height: 6rem;
-
-}
-
+/////////////////////////////////////////ORANGE_BANNER/////////////////////////////////////
 //Loginformulaire
 
 
@@ -386,5 +379,27 @@ padding-left: 0px;
 }
 
 
+/////////////////////////////////////HOME/INDEX.HTML.TWIG//////////////////////////////
 
-// @media screen and (max-width: 970px) {}
+.col-md-12 {
+    background-color: rgb(193, 193, 250);
+}
+
+.research_card {
+    position: relative;
+    top: -120px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .3);
+    width: 80%;
+    height: 200px;
+    border-radius: 5px;
+    margin: auto;
+}
+
+@media screen and (max-width: 991px) {
+    .research_card {
+    margin-top: 180px;
+    }
+}
+
+/////////////////////////////////////HOME/INDEX.HTML.TWIG//////////////////////////////

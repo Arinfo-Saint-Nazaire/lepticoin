@@ -1,49 +1,319 @@
-/*
-Error: Invalid CSS after "...%/0 0 100% 100%": expected "{", was ";"
-        on line 286 of style.scss
+:root {
+  --main-color: #FF6E14; }
 
-281: }
-282: 
-283: .content {
-284:     height: 1500px;
-285: }
-286:     border-radius: 0 0 50% 50%/0 0 100% 100%;
-287: 
-288:     // margin: -.8rem -2.4rem 0;
-289:     height: 6rem;
-290: 
-291: }
+.topbar {
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 3px 5px rgba(131, 50, 50, 0.15);
+  height: 60px; }
 
-Backtrace:
-style.scss:286
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in `tok!'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:688:in `block'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in `ruleset'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...%/0 0 100% 100%\": expected \"{\", was \";\"\A         on line 286 of style.scss\A \A 281: }\A 282: \A 283: .content {\A 284:     height: 1500px;\A 285: }\A 286:     border-radius: 0 0 50% 50%/0 0 100% 100%;\A 287: \A 288:     // margin: -.8rem -2.4rem 0;\A 289:     height: 6rem;\A 290: \A 291: }"; }
+.navbar {
+  position: relative;
+  max-width: 60%;
+  margin: auto; }
+
+.navbar-light .navbar-brand {
+  color: var(--main-color);
+  font-size: xx-large;
+  font-family: "Fredoka One", Arial, Helvetica, sans-serif;
+  margin-bottom: 6px;
+  margin-top: -6px; }
+
+.navbar-light a.navbar-brand:hover {
+  color: var(--main-color); }
+
+.navbar-expand-lg .navbar-collapse {
+  margin-right: -318px;
+  margin-top: -12px; }
+
+.btn-pass_an_ad {
+  background-color: var(--main-color);
+  white-space: nowrap;
+  margin-left: 5px;
+  padding-right: 30px;
+  font-weight: 500; }
+
+button img.pass_an_ad_icon1 {
+  width: 14%;
+  height: 14%; }
+
+i.fa-search {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 15px; }
+
+li.nav-item {
+  text-align: center;
+  margin-left: 10px;
+  font-size: .8em;
+  height: 60px;
+  padding-top: 7px; }
+
+.far,
+.fas {
+  font-size: 1.9em;
+  color: black;
+  margin: auto;
+  margin-bottom: 0; }
+
+.fa-responsive {
+  display: none; }
+
+.navbar-light .navbar-nav .nav-link {
+  font-family: "Open sans", Arial, sans-serif;
+  color: black;
+  white-space: nowrap;
+  margin-top: -5px;
+  margin-bottom: -10px; }
+
+li.nav-search {
+  display: flex;
+  align-items: center;
+  margin-left: 15px; }
+
+a.nav-link.nav-link-search::after {
+  margin-top: 5px;
+  left: 50%;
+  transform: translateX(-50%); }
+
+a.nav-link.nav-link-search:hover::after {
+  width: 95%; }
+
+.navbar-nav li a {
+  display: block;
+  position: relative;
+  background: none;
+  text-decoration: none;
+  margin: 0;
+  padding-left: 0;
+  white-space: nowrap; }
+
+.navbar-nav li a:hover {
+  color: var(--main-color);
+  background: none; }
+
+.navbar-nav li a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  margin-top: 2px;
+  margin-bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 0%;
+  background-color: var(--main-color);
+  border-radius: 5px;
+  transition: width 0.3s; }
+
+.navbar-nav li a:hover::after {
+  width: 100%; }
+
+@media screen and (max-width: 1600px) {
+  .navbar-expand-lg .navbar-collapse {
+    margin-right: -150px; }
+
+  .navbar {
+    min-width: 70%; } }
+@media screen and (max-width: 1300px) {
+  .navbar-expand-lg .navbar-collapse {
+    margin-right: -50px; }
+
+  .navbar {
+    min-width: 90%; } }
+@media screen and (max-width: 991px) {
+  .navbar {
+    min-width: 100%;
+    flex-direction: row-reverse;
+    padding: 0.5rem 0; }
+
+  .navbar-toggler {
+    margin-bottom: 10px; }
+
+  li.nav-search {
+    margin-bottom: 10px; }
+
+  .navbar-light .navbar-toggler {
+    border-color: #fff; }
+
+  .navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='10 2 10 27'><path stroke='rgba(255, 110, 20)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='4' d='M4 7h22M4 15h22M4 23h22'/></svg>"); }
+
+  .fa-responsive {
+    display: block;
+    color: #FF6E14;
+    font-size: 1.5em; }
+
+  .navbar-brand {
+    margin-right: 0; }
+
+  i.fa-search {
+    margin-left: 10px; }
+
+  ._1MxlY {
+    display: none; }
+
+  .nav_card {
+    background-color: #fff;
+    margin-top: -8px;
+    margin-left: -15px;
+    width: 104%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px; }
+
+  .nav_card hr {
+    margin-left: -15px;
+    margin-right: -15px; }
+
+  .pass_an_ad_icon_black {
+    height: 20px;
+    width: 20px;
+    margin-bottom: 3px; }
+
+  .nav_card a {
+    color: #000; }
+
+  .nav_card a:hover {
+    text-decoration: none; }
+
+  .nav_card a .far, .fas {
+    font-size: 1.2rem;
+    margin-right: 20px; }
+
+  .my_account {
+    margin: -18px -15px -16px -15px;
+    padding: 18px 15px 16px 15px; }
+
+  .my_account:hover {
+    background-color: grey; }
+
+  img.monCompte_icon {
+    border-radius: 50%;
+    margin-bottom: 10px; }
+
+  .my_account span {
+    font-size: .7rem; }
+
+  .fa-chevron-right {
+    float: right;
+    color: lightgrey; }
+
+  .nav_card_link .fab {
+    margin-left: 0; }
+
+  .logout_me {
+    margin-top: 80px;
+    margin-bottom: -20px; }
+
+  .nav_card_link.login_me {
+    margin-top: 80px;
+    margin-bottom: -20px;
+    color: var(--main-color); }
+
+  .nav_card_link {
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding: 5px 10px 5px;
+    border-radius: 10px; }
+
+  .nav_card_link:hover {
+    background-color: #f8c2a0;
+    color: var(--main-color); }
+
+  .nav_card_link i:hover,
+  .nav_card_link img:hover {
+    color: var(--main-color); } }
+._1MxlY::before {
+  content: "";
+  display: block;
+  background: var(--main-color);
+  height: 5rem;
+  position: relative; }
+
+._1MxlY::after {
+  content: "";
+  display: block;
+  background: var(--main-color);
+  -webkit-border-radius: 0 0 50% 50%/0 0 100% 100%;
+  border-radius: 0 0 50% 50%/0 0 70% 70%;
+  height: 8rem; }
+
+.formLogin, .formRegister {
+  border-radius: 4px;
+  border: 1px solid #b8b3b3;
+  padding: 40px;
+  box-shadow: 0px 0px 16px 1px rgba(119, 119, 119, 0.59);
+  -moz-box-shadow: 0px 0px 16px 1px rgba(119, 119, 119, 0.59);
+  -webkit-box-shadow: 0px 0px 16px 1px rgba(119, 119, 119, 0.59); }
+
+.btnLogin, .btnRegister {
+  background-color: #4183d7;
+  color: white;
+  border-color: #4183d7;
+  margin-bottom: 40px;
+  margin-top: 40px; }
+  .btnLogin:hover, .btnRegister:hover {
+    background-color: #336699;
+    text-decoration: none;
+    border-color: #4183d7; }
+
+.formCreateCountLink {
+  color: #4183d7; }
+  .formCreateCountLink:hover {
+    color: #336699;
+    text-decoration: none; }
+
+.UserUtilities {
+  border: 1px solid grey;
+  border-radius: 10px;
+  max-width: 29%;
+  margin-bottom: 2vh; }
+
+.UserUtilities2 {
+  border: 1px solid grey;
+  border-radius: 10px;
+  margin-bottom: 2vh; }
+
+.UserUtilities3 {
+  max-width: 29%;
+  padding-right: 0px;
+  padding-left: 0px; }
+
+.UserUtilities4 {
+  border: 1px solid grey;
+  border-radius: 10px;
+  max-width: 100%; }
+
+.btnPrincipal:hover {
+  color: #E95420;
+  transform: scale(1.05); }
+
+#homeUser a {
+  text-decoration: none;
+  transition: all 0.3s ease; }
+  #homeUser a:hover {
+    color: #E95420;
+    transform: scale(1.05); }
+
+.col-md-12 {
+  background-color: #c1c1fa; }
+
+.research_card {
+  position: relative;
+  top: -120px;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  height: 200px;
+  border-radius: 5px;
+  margin: auto; }
+
+@media screen and (max-width: 991px) {
+  .research_card {
+    margin-top: 180px; } }
+
+/*# sourceMappingURL=style.css.map */

@@ -3,15 +3,64 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="research_card">
+                        
+                    </div>
+                </div>
+            </div>
+    </div>
 
-<div class="example-wrapper">
-    <h1>Le ptit coin : n'oubliez pas l'indispensable !</h1>
 
-    <img src="{{ asset('images/pq.jpeg') }}" width="900" alt="à ne pas oublier !">
-</div>
+
+
+    <h1>Notice index</h1>
+
+    <table class="table" id="myTable">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>TitleNotice</th>
+                <th>PriceNotice</th>
+                <th>DescriptionNotice</th>
+                <th>LocationNotice</th>
+                <th>PhotoOneNotice</th>
+                <th>PhotoTwoNotice</th>
+                <th>PhotoThreeNotice</th>
+                <th>DateNotice</th>
+                <th>CategoryProfessionnalNotice</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for notice in notices %}
+            <tr>
+                <td>{{ notice.id }}</td>
+                <td>{{ notice.titleNotice }}</td>
+                <td>{{ notice.priceNotice }}</td>
+                <td>{{ notice.descriptionNotice | raw}}</td>
+                <td>{{ notice.locationNotice | raw}}</td>
+                <td><img src="{{ notice.photoOneNotice | raw}}" alt="photoOneNotice"></td>
+                <td><img src="{{ notice.photoTwoNotice | raw}}" alt="photoTwoNotice"></td>
+                <td><img src="{{ notice.photothreeNotice | raw}}" alt="photothreeNotice"></td>
+                <td>{{ notice.dateNotice ? notice.dateNotice|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ notice.categoryProfessionnalNotice ? 'Yes' : 'No' }}</td>
+                <td>
+                    <a href="{{ path('notice_show', {'id': notice.id}) }}">show</a>
+                    <a href="{{ path('notice_edit', {'id': notice.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="11">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('notice_new') }}">Create new</a>
+
 {% endblock %}
 
