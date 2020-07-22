@@ -12,27 +12,27 @@
                 <td>{{ message.id }}</td>
             </tr>
             <tr>
-                <th>ContentMessage</th>
+                <th>Contenu du message</th>
                 <td>{{ message.contentMessage }}</td>
             </tr>
             <tr>
-                <th>DateMessage</th>
+                <th>Date du message</th>
                 <td>{{ message.dateMessage ? message.dateMessage|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
             <tr>
-                <th>EmailMessage</th>
+                <th>Email</th>
                 <td>{{ message.emailMessage }}</td>
             </tr>
             <tr>
-                <th>SenderMessage</th>
+                <th>Expéditeur</th>
                 <td>{{ message.senderMessage }}</td>
             </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('messages_index') }}">back to list</a>
+    <a href="{{ path('messages_index') }}">Retour à la liste</a>
 
-    <a href="{{ path('messages_edit', {'id': message.id}) }}">edit</a>
+    <a href="{{ path('messages_edit', {'id': message.id}) }}">Modifier</a>
 
     {{ include('messages/_delete_form.html.twig') }}
 {% endblock %}

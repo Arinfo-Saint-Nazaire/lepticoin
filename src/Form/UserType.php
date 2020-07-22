@@ -6,6 +6,10 @@ use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Validator\Constraints\File;
+
 
 class UserType extends AbstractType
 {
@@ -13,12 +17,31 @@ class UserType extends AbstractType
     {
         $builder
             ->add('email')
-            ->add('roles')
-            ->add('password')
-            ->add('isVerified')
+            ->add('roles', ChoiceType::class, [
+                'choices' => [
+                    'Administrateur' => User::ROLE_ADMIN,
+                    'Utilisateur' => User::ROLE_USER,
+                ],
+                'multiple' => true,
+                'expanded' => true,
+                'required' => true,
+            ])
             ->add('firstNameUser')
             ->add('lastNameUser')
-            ->add('photoUser')
+            ->add('photoUser', FileType::class, [
+                'label' => 'Photo',
+                'mapped' => false,
+                'required' => false,
+                'constraints' => [
+                    new File([
+                        'maxSize' => '1024k',
+                        'mimeTypes' => [
+                            'image/*',
+                        ],
+                        'mimeTypesMessage' => 'Veuillez entrer un format de document valide t\'es nul ou quoi?',
+                    ])
+                ],
+            ])
             ->add('birthdayDateUser')
             ->add('phoneUser')
             ->add('adressUser')

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouvelle mention légale{% endblock %}
+
+{% block body %}
+    <h1>Créer une nouvelle mention légale</h1>
+
+    {{ include('legal_notice/_form.html.twig') }}
+
+    <a href="{{ path('legal_notice_index') }}">Retour à la liste</a>
+{% endblock %}

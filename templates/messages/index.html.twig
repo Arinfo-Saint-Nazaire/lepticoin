@@ -1,18 +1,18 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Messages index{% endblock %}
+{% block title %}Index des messages{% endblock %}
 
 {% block body %}
-    <h1>Messages index</h1>
+    <h1>Index des messages</h1>
 
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>ContentMessage</th>
-                <th>DateMessage</th>
-                <th>EmailMessage</th>
-                <th>SenderMessage</th>
+                <th>Contenu du message</th>
+                <th>Date du message</th>
+                <th>Email</th>
+                <th>Expéditeur</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -25,17 +25,17 @@
                 <td>{{ message.emailMessage }}</td>
                 <td>{{ message.senderMessage }}</td>
                 <td>
-                    <a href="{{ path('messages_show', {'id': message.id}) }}">show</a>
-                    <a href="{{ path('messages_edit', {'id': message.id}) }}">edit</a>
+                    <a href="{{ path('messages_show', {'id': message.id}) }}">Montrer</a>
+                    <a href="{{ path('messages_edit', {'id': message.id}) }}">Modifier</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="6">no records found</td>
+                <td colspan="6">Aucune donnée trouvée</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('messages_new') }}">Create new</a>
+    <a href="{{ path('messages_new') }}">Créer un nouveeau message</a>
 {% endblock %}
