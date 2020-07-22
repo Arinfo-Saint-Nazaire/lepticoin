@@ -11,6 +11,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 
 class RegistrationFormType extends AbstractType
 {
@@ -18,7 +19,6 @@ class RegistrationFormType extends AbstractType
     {
         $builder
             ->add('pseudoUser')
-            ->add('registrationDateUser')
             ->add('email')
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
@@ -27,7 +27,6 @@ class RegistrationFormType extends AbstractType
                         'message' => 'You should agree to our terms.',
                     ]),
                 ],
-
             ])
             ->add('plainPassword', PasswordType::class, [
                 // instead of being set onto the object directly,

@@ -8,6 +8,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Validator\Constraints\File;
 
 
@@ -48,8 +49,8 @@ class UserType extends AbstractType
             ->add('cityUser')
             ->add('postalCodeUser')
             ->add('civilityUser')
-            ->add('registrationDateUser')
             ->add('pseudoUser')
+            
         ;
     }
 

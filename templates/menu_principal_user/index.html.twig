@@ -43,17 +43,13 @@
 			</a>
 		</div>
 		<div class="row justify-content-between">
-		{% for user in users %}
 			<a class="col-xl-4 UserUtilities" href="{{path('user_edit',{'id':app.user.id })}} ">
-		
 				<div>
 					<i class="far fa-user-circle m-4"></i>
 					<h5>Profil</h5>
 					<p>Modifier mon profil public, accéder à mes recommandations et à l’espace candidat</p>
 				</div>
 			</a>
-			{% endfor %}
-
 			<a class="col-xl-4 UserUtilities" href="#">
 				<div>
 					<i class="fas fa-cogs m-4"></i>

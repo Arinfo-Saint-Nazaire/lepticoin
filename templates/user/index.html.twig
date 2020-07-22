@@ -31,7 +31,7 @@
         {% for user in users %}
             <tr>
                 <td>{{ user.id }}</td>
-                <td>{{ user.email }}</td>
+                <td>{{ user.email {'label': 'votre email'}}}</td>
                 <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
                 <td>{{ user.password }}</td>
                 <td>{{ user.isVerified ? 'Yes' : 'No' }}</td>
