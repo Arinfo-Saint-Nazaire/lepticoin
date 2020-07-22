@@ -5,7 +5,11 @@
   position: relative;
   background-color: #fff;
   box-shadow: 0 3px 5px rgba(131, 50, 50, 0.15);
+<<<<<<< Updated upstream
   height: 60px; }
+=======
+  height: 67px; }
+>>>>>>> Stashed changes
 
 .navbar {
   position: relative;
@@ -15,26 +19,39 @@
 .navbar-light .navbar-brand {
   color: var(--main-color);
   font-size: xx-large;
+<<<<<<< Updated upstream
   font-family: "Fredoka One", Arial, Helvetica, sans-serif;
   margin-bottom: 6px;
   margin-top: -6px; }
+=======
+  font-family: "Fredoka One", Arial, Helvetica, sans-serif; }
+>>>>>>> Stashed changes
 
 .navbar-light a.navbar-brand:hover {
   color: var(--main-color); }
 
 .navbar-expand-lg .navbar-collapse {
+<<<<<<< Updated upstream
   margin-right: -318px;
   margin-top: -12px; }
+=======
+  margin-right: -318px; }
+>>>>>>> Stashed changes
 
 .btn-pass_an_ad {
   background-color: var(--main-color);
   white-space: nowrap;
   margin-left: 5px;
+<<<<<<< Updated upstream
   padding-right: 30px;
+=======
+  padding-right: 20px;
+>>>>>>> Stashed changes
   font-weight: 500; }
 
 button img.pass_an_ad_icon1 {
   width: 14%;
+<<<<<<< Updated upstream
   height: 14%; }
 
 i.fa-search {
@@ -42,13 +59,25 @@ i.fa-search {
   margin-bottom: 10px;
   margin-left: 0px;
   margin-right: 15px; }
+=======
+  height: 14%;
+  background-color: black; }
+
+.pass_an_ad_icon:hover {
+  background-color: black; }
+>>>>>>> Stashed changes
 
 li.nav-item {
   text-align: center;
   margin-left: 10px;
+<<<<<<< Updated upstream
   font-size: .8em;
   height: 60px;
   padding-top: 7px; }
+=======
+  font-size: .85em;
+  height: 60px; }
+>>>>>>> Stashed changes
 
 .far,
 .fas {
@@ -56,9 +85,12 @@ li.nav-item {
   color: black;
   margin: auto;
   margin-bottom: 0; }
+<<<<<<< Updated upstream
 
 .fa-responsive {
   display: none; }
+=======
+>>>>>>> Stashed changes
 
 .navbar-light .navbar-nav .nav-link {
   font-family: "Open sans", Arial, sans-serif;
@@ -71,6 +103,7 @@ li.nav-search {
   display: flex;
   align-items: center;
   margin-left: 15px; }
+<<<<<<< Updated upstream
 
 a.nav-link.nav-link-search::after {
   margin-top: 5px;
@@ -79,6 +112,8 @@ a.nav-link.nav-link-search::after {
 
 a.nav-link.nav-link-search:hover::after {
   width: 95%; }
+=======
+>>>>>>> Stashed changes
 
 .navbar-nav li a {
   display: block;
@@ -101,7 +136,11 @@ a.nav-link.nav-link-search:hover::after {
   margin-bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
+<<<<<<< Updated upstream
   height: 4px;
+=======
+  height: 3px;
+>>>>>>> Stashed changes
   width: 0%;
   background-color: var(--main-color);
   border-radius: 5px;
@@ -109,10 +148,13 @@ a.nav-link.nav-link-search:hover::after {
 
 .navbar-nav li a:hover::after {
   width: 100%; }
+<<<<<<< Updated upstream
 
 @media screen and (max-width: 1600px) {
   .navbar-expand-lg .navbar-collapse {
     margin-right: -150px; }
+=======
+>>>>>>> Stashed changes
 
   .navbar {
     min-width: 70%; } }
@@ -231,15 +273,24 @@ a.nav-link.nav-link-search:hover::after {
   content: "";
   display: block;
   background: var(--main-color);
+<<<<<<< Updated upstream
   height: 5rem;
   position: relative; }
+=======
+  height: 9rem; }
+>>>>>>> Stashed changes
 
 ._1MxlY::after {
   content: "";
   display: block;
   background: var(--main-color);
   -webkit-border-radius: 0 0 50% 50%/0 0 100% 100%;
+<<<<<<< Updated upstream
   border-radius: 0 0 50% 50%/0 0 70% 70%;
+=======
+  border-radius: 0 0 50% 50%/0 0 100% 100%;
+  margin: -.8rem -2.4rem 0;
+>>>>>>> Stashed changes
   height: 8rem; }
 
 .formLogin, .formRegister {
@@ -267,6 +318,7 @@ a.nav-link.nav-link-search:hover::after {
     color: #336699;
     text-decoration: none; }
 
+<<<<<<< Updated upstream
 .UserUtilities {
   border: 1px solid grey;
   border-radius: 10px;
@@ -315,5 +367,47 @@ a.nav-link.nav-link-search:hover::after {
 @media screen and (max-width: 991px) {
   .research_card {
     margin-top: 180px; } }
+=======
+.content {
+  height: 1500px; }
+
+.bonus-v {
+  text-align: center; }
+  .bonus-v img {
+    margin: auto; }
+
+.legalnoticetext, .rgpdtext, .faqtext {
+  color: black; }
+  .legalnoticetext h2, .rgpdtext h2, .faqtext h2 {
+    text-align: center;
+    font-size: 2rem; }
+  .legalnoticetext h3, .rgpdtext h3, .faqtext h3 {
+    font-size: 1.25rem; }
+  .legalnoticetext p, .legalnoticetext li, .rgpdtext p, .rgpdtext li, .faqtext p, .faqtext li {
+    font-size: 0.8rem; }
+
+footer {
+  background-color: #4d4b4b;
+  color: white; }
+  footer h3 {
+    font-size: 1.25rem;
+    margin-top: 20px; }
+  footer p {
+    font-size: 0.8rem; }
+  footer hr {
+    background-color: white;
+    max-width: 800px; }
+  footer .footer {
+    max-width: 830px;
+    margin: auto; }
+  footer .lepticoin-footer {
+    text-align: center; }
+  footer .arinfo {
+    padding-left: 15px;
+    padding-bottom: 60px; }
+  footer .logo-arinfo {
+    float: right;
+    padding-right: 15px; }
+>>>>>>> Stashed changes
 
 /*# sourceMappingURL=style.css.map */
