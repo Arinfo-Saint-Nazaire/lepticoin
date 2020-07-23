@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -98,8 +100,14 @@ class User implements UserInterface
      */
     private $pseudoUser;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Notice::class, mappedBy="user")
+     */
+    private $Notice;
+
     public function __construct(){ 
         $this->roles= [self::ROLE_USER];
+        $this->Notice = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -320,6 +328,37 @@ class User implements UserInterface
     public function setPseudoUser(?string $pseudoUser): self
     {
         $this->pseudoUser = $pseudoUser;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Notice[]
+     */
+    public function getNotice(): Collection
+    {
+        return $this->Notice;
+    }
+
+    public function addNotice(Notice $notice): self
+    {
+        if (!$this->Notice->contains($notice)) {
+            $this->Notice[] = $notice;
+            $notice->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeNotice(Notice $notice): self
+    {
+        if ($this->Notice->contains($notice)) {
+            $this->Notice->removeElement($notice);
+            // set the owning side to null (unless already changed)
+            if ($notice->getUser() === $this) {
+                $notice->setUser(null);
+            }
+        }
 
         return $this;
     }
