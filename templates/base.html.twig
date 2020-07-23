@@ -63,11 +63,15 @@
 						</li>
 						<li class="nav-item">
 							<i class="far fa-user"></i>
-							<a class="nav-link" href="#">Se connecter</a>
+							<a class="nav-link" href="{{path('app_login')}} ">Se connecter</a>
 						</li>
 						<li class="nav-item">
 							<i class="far fa-user"></i>
-							<a class="nav-link" href="{{path('menu_principal_user')}} ">Modifier un utilisateur</a>
+							<a class="nav-link" href="{{path('app_logout')}} ">Se deconnecter</a>
+						</li>
+						<li class="nav-item">
+							<i class="far fa-user"></i>
+							<a class="nav-link" href="{{path('menu_principal_user')}} ">{{app.user.pseudoUser}}</a>
 						</li>
 					</ul>
 
