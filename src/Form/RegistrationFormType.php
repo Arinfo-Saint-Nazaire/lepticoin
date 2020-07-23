@@ -12,7 +12,7 @@ use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 
 class RegistrationFormType extends AbstractType
 {
@@ -20,9 +20,9 @@ class RegistrationFormType extends AbstractType
     {
         $builder
             ->add('pseudoUser', TextType::class,['label' => 'Pseudo'])
-            ->add('registrationDateUser', TextType::class,['label' => 'Daye d\'enregistrement'])
-            ->add('email', TextType::class,['label' => 'E-mail'])
-            ->add('agreeTerms', TextType::class,['label' => 'Accepter les conditions'], CheckboxType::class, [
+            ->add('email', EmailType::class,['label' => 'E-mail'])
+            ->add('agreeTerms', CheckboxType::class, [
+                'label' => 'Accepter les conditions',
                 'mapped' => false,
                 'constraints' => [
                     new IsTrue([
@@ -31,7 +31,7 @@ class RegistrationFormType extends AbstractType
                 ],
 
             ])
-            ->add('plainPassword', TextType::class,['label' => 'Mot de passe en clair'], PasswordType::class, [
+            ->add('plainPassword', PasswordType::class, [
                 // instead of being set onto the object directly,
                 // this is read and encoded in the controller
                 'mapped' => false,
