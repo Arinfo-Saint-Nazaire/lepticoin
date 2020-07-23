@@ -18,13 +18,12 @@ class RegistrationFormType extends AbstractType
     {
         $builder
             ->add('pseudoUser')
-            ->add('registrationDateUser')
             ->add('email')
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
                 'constraints' => [
                     new IsTrue([
-                        'message' => 'You should agree to our terms.',
+                        'message' => 'Accepter les termes du contrat d\'utilisation',
                     ]),
                 ],
 
@@ -35,7 +34,7 @@ class RegistrationFormType extends AbstractType
                 'mapped' => false,
                 'constraints' => [
                     new NotBlank([
-                        'message' => 'Please enter a password',
+                        'message' => 'entrez votre password',
                     ]),
                     new Length([
                         'min' => 6,
