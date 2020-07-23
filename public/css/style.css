@@ -433,6 +433,7 @@ a.nav-link.nav-link-search:hover::after {
 }
 
 footer {
+  margin-top: 20vh;
   background-color: #4d4b4b;
   color: white;
 }

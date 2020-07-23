@@ -3,6 +3,9 @@
 {% block title %}Modifier une annonce{% endblock %}
 
 {% block body %}
+
+{% form_theme form 'bootstrap_4_horizontal_layout.html.twig' %}
+<div class="formEdit">
     <h1>Modifier une annonce</h1>
 
     {{ include('notice/_form.html.twig', {'button_label': 'Update'}) }}
@@ -10,4 +13,5 @@
     <a href="{{ path('notice_index') }}">Retour à la liste</a>
 
     {{ include('notice/_delete_form.html.twig') }}
+   </div> {{ form_end(form) }}
 {% endblock %}
