@@ -13,11 +13,11 @@
 						{{ app.user.pseudoUser }}</h1>
 					<img src="{{ user.photoUser | raw}}" alt="photoUser">
                     <input type="file" name="" id="">
-					<p class=" mb-3 font-weight-normal text-center">Vous pouvez éditer votre profil ici, faites en bon usage</p>
+					<p class=" mb-3 font-weight-normal text-center">Vous pouvez éditer votre profil ici</p>
 					<select name="Votre civilité" id="pet-select" class="form-control"><br>
 						<option value="{{ user.civilityUser ? 'Yes' }}">Monsieur</option>
 						<option value="{{ user.civilityUser ? 'No' }}">Madame</option>
-						<label for="inputEmail">Modifier mon Email</label>
+						<label for="inputEmail">Modifier mon E-mail</label>
 						<input type="email" value="{{user.email }}" name="email" id="inputEmail" class="form-control" required autofocus>
 						<label for="">Modifier mon prénom</label>
 						<input type="text" value="{{user.firstNameUser}}" class="form-control">

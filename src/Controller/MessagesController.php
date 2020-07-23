@@ -31,6 +31,7 @@ class MessagesController extends AbstractController
     public function new(Request $request): Response
     {
         $message = new Messages();
+        $message->setDateMessage(new \DateTime());
         $form = $this->createForm(MessagesType::class, $message);
         $form->handleRequest($request);
 
