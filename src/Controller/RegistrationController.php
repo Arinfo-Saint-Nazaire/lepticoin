@@ -29,6 +29,7 @@ class RegistrationController extends AbstractController
     public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder): Response
     {
         $user = new User();
+        $user->setregistrationDateUser(new \DateTime());
         $form = $this->createForm(RegistrationFormType::class, $user);
         $form->handleRequest($request);
 
@@ -48,7 +49,7 @@ class RegistrationController extends AbstractController
             // generate a signed url and email it to the user
             $this->emailVerifier->sendEmailConfirmation('app_verify_email', $user,
                 (new TemplatedEmail())
-                    ->from(new Address('admin@lepticoin.asnprojets.fr', 'bienvenu au pti coin mon canard'))
+                    ->from(new Address('segplus44600@gmail.com', 'bienvenu au pti coin mon canard'))
                     ->to($user->getEmail())
                     ->subject('Veuillez confirmer votre e-mail s\'il vous plait')
                     ->htmlTemplate('registration/confirmation_email.html.twig')
