@@ -2,19 +2,26 @@
 
 namespace App\Controller;
 
+use App\Repository\NoticeRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\UserRepository;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+
 class MenuPrincipalUserController extends AbstractController
+
 {
     /**
+     * @IsGranted("ROLE_USER")
      * @Route("/menu/principal/user", name="menu_principal_user")
      */
-    public function index(UserRepository $userRepository)
+    public function index(UserRepository $userRepository,NoticeRepository $noticeRepository)
     {
         return $this->render('menu_principal_user/index.html.twig', [
             'controller_name' => 'MenuPrincipalUserController',
             'users' => $userRepository->findall(),
+            'notices' => $noticeRepository->findAll(),
         ]);
     }
 }
