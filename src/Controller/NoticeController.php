@@ -34,6 +34,7 @@ class NoticeController extends AbstractController
     public function new(Request $request): Response
     {
         $notice = new Notice();
+        $notice->setUser($this->getUser());
         $notice->setDateNotice(new \DateTime());
         $form = $this->createForm(NoticeType::class, $notice);
         $form->handleRequest($request);

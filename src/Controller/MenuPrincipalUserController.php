@@ -21,7 +21,22 @@ class MenuPrincipalUserController extends AbstractController
         return $this->render('menu_principal_user/index.html.twig', [
             'controller_name' => 'MenuPrincipalUserController',
             'users' => $userRepository->findall(),
-            'notices' => $noticeRepository->findAll(),
+            'notice' => $noticeRepository->findAll(),
+        ]);
+    }
+
+
+    /**
+     * @IsGranted("ROLE_USER")
+     * @Route("/menu/notice", name="notice_user_edit")
+     */
+
+    public function caca(UserRepository $userRepository,NoticeRepository $noticeRepository)
+    {
+        return $this->render('menu_principal_user/noticeEdit.html.twig', [
+            'controller_name' => 'MenuPrincipalUserController',
+            'users' => $userRepository->findall(),
+            'notice' => $noticeRepository->findAll(),
         ]);
     }
 }
