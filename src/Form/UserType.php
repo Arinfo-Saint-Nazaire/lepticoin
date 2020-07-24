@@ -10,7 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Validator\Constraints\File;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-
+use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 
 
 class UserType extends AbstractType
@@ -50,7 +50,7 @@ class UserType extends AbstractType
                     ])
                 ],
             ])
-            ->add('birthdayDateUser', TextType::class,['label' => 'Date d\'anniverssaire'])
+            ->add('birthdayDateUser', BirthdayType::class,['label' => 'Date d\'anniverssaire'])
             ->add('phoneUser', TextType::class,['label' => 'Téléphone'])
             ->add('adressUser', TextType::class,['label' => 'Adresse'])
             ->add('cityUser', TextType::class,['label' => 'Ville'])
