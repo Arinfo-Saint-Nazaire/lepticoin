@@ -22,11 +22,11 @@
             </tr>
         </thead>
         <tbody>
-            {% for notice in notice %}
-            {% for user in users%}
-
+      
+        {% for notice in notice %}
             
-            {% if user.id == notice.user.id is defined and notice is not null %}
+        
+            {% if notice.user == app.user.id is defined %}
             <tr>
                 <td>{{ notice.titleNotice }}</td>
                 <td>{{ notice.priceNotice }}</td>
@@ -42,14 +42,13 @@
                     <a href="{{ path('notice_edit', {'id': notice.id}) }}">Modifier</a>
                 </td>
             </tr>
-            {% endif %}
-            {% else %}
+       {% endif %}
+{% else %}
             <tr>
                 <td colspan="11">Aucune donnée trouvée</td>
             </tr>
-            
-            {% endfor %}
-             {% endfor %}
+                 
+         {% endfor %}
         </tbody>
     </table>
 
