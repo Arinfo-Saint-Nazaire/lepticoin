@@ -9,7 +9,13 @@
 			<div class="col-xl-12  UserUtilities2">
 				<div class="row">
 					<div class="col-xl-6 ">
-						<i class="far fa-grin m-4"></i>
+						{% for user in users%}
+                    {% if user.photoUser == NULL %}
+								<i class="far fa-grin m-4"></i>
+						{% else %}
+						<img src="{{ asset('uploads/photos/' ~ user.photoUser)}}" alt="photoUser">
+					{% endif %}
+					{% endfor %}
 						<h5 class="align-baseline">Bonjour {{app.user.pseudoUser}}</h5>
 						<p>vous pouvez modifier votre compte ici , faites en bon usage</p>
 						<blockquote>l'équipe du Pticoin</blockquote>

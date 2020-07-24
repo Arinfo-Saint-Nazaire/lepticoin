@@ -37,7 +37,7 @@
                 <td>{{ user.isVerified ? 'Yes' : 'No' }}</td>
                 <td>{{ user.firstNameUser }}</td>
                 <td>{{ user.lastNameUser }}</td>
-                <td><img src="{{ user.photoUser | raw}}" alt="photoUser"></td>
+                <td><img src="{{ asset('uploads/photos/' ~ user.photoUser)}}" alt="photoUser"></td>
                 <td>{{ user.birthdayDateUser ? user.birthdayDateUser|date('Y-m-d') : '' }}</td>
                 <td>{{ user.phoneUser }}</td>
                 <td>{{ user.adressUser }}</td>
