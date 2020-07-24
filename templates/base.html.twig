@@ -61,13 +61,15 @@
 							<i class="far fa-comment-alt"></i>
 							<a class="nav-link" href="#">Messages</a>
 						</li>
-						<li class="nav-item">
-							<i class="far fa-user"></i>
-							<a class="nav-link" href="{{path('app_login')}} ">Se connecter</a>
-						</li>	{% if is_granted('ROLE_USER') %}
+							{% if is_granted('ROLE_USER') %}
 						<li class="nav-item">
 							<i class="far fa-user"></i>
 							<a class="nav-link" href="{{path('app_logout')}} ">Se deconnecter</a>
+						</li>
+						{% else %}
+						<li class="nav-item">
+							<i class="far fa-user"></i>
+							<a class="nav-link" href="{{path('app_login')}} ">Se connecter</a>
 						</li>
 						{% endif %}
 						{% if is_granted('ROLE_USER') %}
