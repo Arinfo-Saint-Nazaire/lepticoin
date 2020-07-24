@@ -9,13 +9,12 @@
 			<div class="col-xl-12  UserUtilities2">
 				<div class="row">
 					<div class="col-xl-6 ">
-						{% for user in users%}
-                    {% if user.photoUser == NULL %}
-								<i class="far fa-grin m-4"></i>
+                    {% if user.photoUser is defined%}
+								<img src="{{ asset('uploads/photos/' ~ user.photoUser)}}" alt="photoUser">
 						{% else %}
-						<img src="{{ asset('uploads/photos/' ~ user.photoUser)}}" alt="photoUser">
+						<i class="far fa-grin m-4"></i>
 					{% endif %}
-					{% endfor %}
+			
 						<h5 class="align-baseline">Bonjour {{app.user.pseudoUser}}</h5>
 						<p>vous pouvez modifier votre compte ici , faites en bon usage</p>
 						<blockquote>l'équipe du Pticoin</blockquote>
@@ -51,7 +50,7 @@
 			</a>
 		</div>
 		<div class="row justify-content-between">
-		{% for user in users %}
+	{% if app.user.id is defined  %}
 			<a class="col-xl-4 UserUtilities" href="{{path('user_edit',{'id':app.user.id })}} ">
 		
 				<div>
@@ -59,8 +58,9 @@
 					<h5>Profil</h5>
 					<p>Modifier mon profil public, accéder à mes recommandations et à l’espace candidat</p>
 				</div>
+				{% endif %}
 			</a>
-			{% endfor %}
+	
 
 			<a class="col-xl-4 UserUtilities" href="#">
 				<div>

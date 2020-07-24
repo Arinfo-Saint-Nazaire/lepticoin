@@ -20,7 +20,7 @@ class MenuPrincipalUserController extends AbstractController
     {
         return $this->render('menu_principal_user/index.html.twig', [
             'controller_name' => 'MenuPrincipalUserController',
-            'users' => $userRepository->findall(),
+            'user' => $userRepository->findall(),
             'notice' => $noticeRepository->findAll(),
         ]);
     }
@@ -35,8 +35,9 @@ class MenuPrincipalUserController extends AbstractController
     {
         return $this->render('menu_principal_user/noticeEdit.html.twig', [
             'controller_name' => 'MenuPrincipalUserController',
-            'users' => $userRepository->findall(),
+            'user' => $userRepository->findall(),
             'notice' => $noticeRepository->findAll(),
         ]);
     }
+  
 }
