@@ -80,8 +80,7 @@ class NoticeController extends AbstractController
                         $this->getParameter('photos_directory'),
                         $newFilename
                     );
-                } catch (FileException $e) {
-                }
+                } catch (FileException $e) {}
 
                 $notice->setphotoTwoNotice($newFilename);
             }
@@ -98,8 +97,7 @@ class NoticeController extends AbstractController
                         $this->getParameter('photos_directory'),
                         $newFilename
                     );
-                } catch (FileException $e) {
-                }
+                } catch (FileException $e) {}
 
                 $notice->setphotoThreeNotice($newFilename);
             }
@@ -131,12 +129,70 @@ class NoticeController extends AbstractController
      * @IsGranted("ROLE_USER")
      * @Route("/{id}/edit", name="notice_edit", methods={"GET","POST"})
      */
-    public function edit(Request $request, Notice $notice): Response
+    public function edit(Request $request, Notice $notice, SluggerInterface $slugger): Response
     {
         $form = $this->createForm(NoticeType::class, $notice);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            /** Début du code à ajouter **/
+            $photoOneNotice = $form->get('photoOneNotice')->getData();
+
+            if ($photoOneNotice) {
+                $originalFilename = pathinfo($photoOneNotice->getClientOriginalName(), PATHINFO_FILENAME);
+                $safeFilename = $slugger->slug($originalFilename);
+                $newFilename = $safeFilename . '-' . uniqid() . '.' . $photoOneNotice->guessExtension();
+
+                try {
+                    $photoOneNotice->move(
+                        $this->getParameter('photos_directory'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {}
+
+                $notice->setPhotoOneNotice($newFilename);
+            }
+            /** Fin du code à ajouter **/
+
+            /** Début du code à ajouter **/
+            $photoTwoNotice = $form->get('photoTwoNotice')->getData();
+
+            if ($photoTwoNotice) {
+                $originalFilename = pathinfo($photoTwoNotice->getClientOriginalName(), PATHINFO_FILENAME);
+                $safeFilename = $slugger->slug($originalFilename);
+                $newFilename = $safeFilename . '-' . uniqid() . '.' . $photoTwoNotice->guessExtension();
+
+                try {
+                    $photoTwoNotice->move(
+                        $this->getParameter('photos_directory'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {}
+
+                $notice->setPhotoTwoNotice($newFilename);
+            }
+            /** Fin du code à ajouter **/
+
+            /** Début du code à ajouter **/
+            $photoThreeNotice = $form->get('photoThreeNotice')->getData();
+
+            if ($photoThreeNotice) {
+                $originalFilename = pathinfo($photoThreeNotice->getClientOriginalName(), PATHINFO_FILENAME);
+                $safeFilename = $slugger->slug($originalFilename);
+                $newFilename = $safeFilename . '-' . uniqid() . '.' . $photoThreeNotice->guessExtension();
+
+                try {
+                    $photoThreeNotice->move(
+                        $this->getParameter('photos_directory'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {}
+
+                $notice->setPhotoThreeNotice($newFilename);
+            }
+            /** Fin du code à ajouter **/
+
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('notice_index');
