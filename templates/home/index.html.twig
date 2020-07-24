@@ -7,18 +7,20 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<div class="research_card"></div>
-
+			<div class="research_card">
+                <p>Le Pticoin</p>
+            </div>
 		</div>
 	</div>
 </div>
 {% for notice in notices %}
 <div class="container">
 	<div class="row">
-		<div class="card mb-3" style="max-width: 540px;">
+		<div class="card mb-3">
 			<div class="row no-gutters">
 				<div class="col-md-4">
-					<img src="{{ notice.photoOneNotice | raw}}" alt="photoOneNotice">
+					<img src="{{asset('images/bike.jpg')}}" class="card-img" alt="photoOneNotice">
+                    {# {{ notice.photoOneNotice | raw}} #}
 				</div>
 				<div class="col-md-8">
 					<div class="card-body">
