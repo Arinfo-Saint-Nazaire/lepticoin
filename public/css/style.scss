@@ -369,14 +369,12 @@ a.nav-link.nav-link-search:hover::after {
         border-radius: 10px;
         max-width: 100%;
     
-    
     }
     .btnPrincipal{
         &:hover {
             color: #E95420;
             transform:scale(1.05);
         }
-    
     }
     
     #homeUser  {
@@ -413,16 +411,13 @@ label{
     width: 250px;
 
     }
-
 }
 
 #user_birthdayDateUser{
     float: right;
-
 }
 #user_registrationDateUser_date{
 float: right;
-
 }
 // ///////////////////////////////////// Vincent /////////////////////////////////////
 
@@ -552,7 +547,7 @@ footer {
 
 img.card-img {
     width: 200px;
-    height: 200px;
+    // height: 200px;
     margin-left: 20px;
 }
 
