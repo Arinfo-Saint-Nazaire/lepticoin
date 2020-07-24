@@ -30,9 +30,9 @@
                 <td>{{ notice.priceNotice }}</td>
                 <td>{{ notice.descriptionNotice | raw}}</td>
                 <td>{{ notice.locationNotice | raw}}</td>
-                <td><img src="{{ notice.photoOneNotice | raw}}" alt="photoOneNotice"></td>
-                <td><img src="{{ notice.photoTwoNotice | raw}}" alt="photoTwoNotice"></td>
-                <td><img src="{{ notice.photothreeNotice | raw}}" alt="photothreeNotice"></td>
+                <td><img src="{{ asset('uploads/photos/' ~ notice.photoOneNotice) }}" width="100"></td>
+                <td><img src="{{ asset('uploads/photos/' ~ notice.photoTwoNotice) }}" width="100"></td>
+                <td><img src="{{ asset('uploads/photos/' ~ notice.photoThreeNotice) }}" width="100"></td>
                 <td>{{ notice.dateNotice ? notice.dateNotice|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ notice.categoryProfessionnalNotice ? 'Oui' : 'Non' }}</td>
                 <td>
