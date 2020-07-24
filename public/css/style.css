@@ -215,7 +215,8 @@ a.nav-link.nav-link-search:hover::after {
   .nav_card a:hover {
     text-decoration: none;
   }
-  .nav_card a .far, .fas {
+  .nav_card a .far,
+  .fas {
     font-size: 1.2rem;
     margin-right: 20px;
   }
@@ -397,27 +398,37 @@ a.nav-link.nav-link-search:hover::after {
   margin: auto;
 }
 
-.legalnoticetext, .rgpdtext, .faqtext, .noticetext {
+.legalnoticetext,
+.rgpdtext,
+.faqtext,
+.noticetext {
   color: black;
 }
 
-.legalnoticetext h2, .rgpdtext h2, .faqtext h2, .noticetext h2 {
+.legalnoticetext h2,
+.rgpdtext h2,
+.faqtext h2,
+.noticetext h2 {
   text-align: center;
   font-size: 2rem;
-  margin-top: 80px;
 }
 
-.legalnoticetext h3, .rgpdtext h3, .faqtext h3, .noticetext h3 {
+.legalnoticetext h3,
+.rgpdtext h3,
+.faqtext h3,
+.noticetext h3 {
   font-size: 1.25rem;
 }
 
-.legalnoticetext p, .legalnoticetext li, .rgpdtext p, .rgpdtext li, .faqtext p, .faqtext li, .noticetext p, .noticetext li {
+.legalnoticetext p,
+.legalnoticetext li,
+.rgpdtext p,
+.rgpdtext li,
+.faqtext p,
+.faqtext li,
+.noticetext p,
+.noticetext li {
   font-size: 0.8rem;
-}
-
-.legalnoticetext h2, .rgpdtext h2, .faqtext h2, .noticetext h2 {
-  text-align: center;
-  margin-top: 80px;
 }
 
 .example-wrapper {

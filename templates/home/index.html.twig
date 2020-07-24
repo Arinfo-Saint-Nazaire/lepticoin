@@ -4,43 +4,41 @@
 
 {% block body %}
 <div class="noticetext">
-<div class="container">
-	<div class="row">
-		<div class="col-md-12">
-			<div class="research_card">
-                <p>Le Pticoin</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="research_card">
+                    <p>Le Pticoin</p>
+                </div>
             </div>
-		</div>
-	</div>
-</div>
-{% for notice in notices %}
-<div class="container">
-	<div class="row">
-		<div class="card mb-3">
-			<div class="row no-gutters">
-				<div class="col-md-4">
-					<img src="{{ asset('uploads/photos/' ~ notice.photoOneNotice) }}" class="card-img" alt="photoOneNotice">
-                    {# {{ notice.photoOneNotice | raw}} #}
-				</div>
-				<div class="col-md-8">
-					<div class="card-body">
-						<h4 class="card-title">{{ notice.titleNotice }}</h4>
-                        <p class="card-price">{{ notice.priceNotice }} €</p>
-						<p class="card-text">{{ notice.descriptionNotice | raw}}</p>
-						<p class="card-text">
-							<small class="text-muted">{{ notice.dateNotice ? notice.dateNotice|date('d-m-Y H:i:s') : '' }}</small>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
+        </div>
     </div>
-</div>
-{% endfor %}
-
-
-
-
+    {# {% for notice in notices %}
+    <div class="container">
+        <div class="row">
+            <div class="card mb-3">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="{{ asset('uploads/photos/' ~ notice.photoOneNotice) }}" class="card-img"
+                            alt="photoOneNotice"> #}
+                        {# {{ notice.photoOneNotice | raw}} #}
+                    {# </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h4 class="card-title">{{ notice.titleNotice }}</h4>
+                            <p class="card-price">{{ notice.priceNotice }} €</p>
+                            <p class="card-text">{{ notice.descriptionNotice | raw}}</p>
+                            <p class="card-text">
+                                <small
+                                    class="text-muted">{{ notice.dateNotice ? notice.dateNotice|date('d-m-Y H:i:s') : '' }}</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %} #}
 
     <h2>Index des annonces</h2>
 
@@ -68,9 +66,12 @@
                 <td>{{ notice.priceNotice }}</td>
                 <td>{{ notice.descriptionNotice | raw}}</td>
                 <td>{{ notice.locationNotice | raw}}</td>
-                <td><img src="{{ asset('uploads/photos/' ~ notice.photoOneNotice) | raw}}" alt="photoOneNotice" width="100"></td>
-                <td><img src="{{ asset('uploads/photos/' ~ notice.photoTwoNotice) | raw}}" alt="photoTwoNotice" width="100"></td>
-                <td><img src="{{ asset('uploads/photos/' ~ notice.photoThreeNotice) | raw}}" alt="photothreeNotice" width="100"></td>
+                <td><img src="{{ asset('uploads/photos/' ~ notice.photoOneNotice) | raw}}" alt="photoOneNotice"
+                        width="100"></td>
+                <td><img src="{{ asset('uploads/photos/' ~ notice.photoTwoNotice) | raw}}" alt="photoTwoNotice"
+                        width="100"></td>
+                <td><img src="{{ asset('uploads/photos/' ~ notice.photoThreeNotice) | raw}}" alt="photothreeNotice"
+                        width="100"></td>
                 <td>{{ notice.dateNotice ? notice.dateNotice|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ notice.categoryProfessionnalNotice ? 'Oui' : 'Non' }}</td>
                 <td>
