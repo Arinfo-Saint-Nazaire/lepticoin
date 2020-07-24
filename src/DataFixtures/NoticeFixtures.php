@@ -16,9 +16,9 @@ class NoticeFixtures extends Fixture
                 ->setPriceNotice(99)
                 ->setDescriptionNotice("Description n°$i")
                 ->setLocationNotice("Lieu n°$i")
-                ->setPhotoOneNotice("http://placehold.it/100x75")
-                ->setPhotoTwoNotice("http://placehold.it/100x75")
-                ->setPhotoThreeNotice("http://placehold.it/100x75")
+                ->setPhotoOneNotice('logo-arinfo.jpg')
+                ->setPhotoTwoNotice('logo-arinfo.jpg')
+                ->setPhotoThreeNotice('logo-arinfo.jpg')
                 ->setDateNotice(new \DateTime())
                 ->setCategoryProfessionnalNotice(1);
 
