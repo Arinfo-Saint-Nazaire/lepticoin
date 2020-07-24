@@ -9,8 +9,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\String\Slugger\SluggerInterface;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+
 
 /**
  * @Route("/notice")
@@ -31,7 +35,7 @@ class NoticeController extends AbstractController
      * @IsGranted("ROLE_USER")
      * @Route("/new", name="notice_new", methods={"GET","POST"})
      */
-    public function new(Request $request): Response
+    public function new(Request $request, SluggerInterface $slugger): Response
     {
         $notice = new Notice();
         $notice->setUser($this->getUser());
@@ -40,6 +44,33 @@ class NoticeController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            /** Début du code à ajouter **/
+            $photoOneNotice = $form->get('photoOneNotice')->getData();
+ 
+            if ($photoOneNotice) {
+                $originalFilename = pathinfo($photoOneNotice->getClientOriginalName(), PATHINFO_FILENAME);
+                // ceci est nécessaire pour inclure en toute sécurité le nom de fichier dans l'URL
+                $safeFilename = $slugger->slug($originalFilename);
+                $newFilename = $safeFilename.'-'.uniqid().'.'.$photoOneNotice->guessExtension();
+ 
+                // Déplacez le fichier dans le répertoire où les brochures sont stockées
+                try {
+                    $photoOneNotice->move(
+                        $this->getParameter('photos_directory'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {
+                    // ... gérer l'exception si quelque chose se produit pendant le téléchargement du fichier
+                }
+ 
+                // met à jour la propriété 'photoOneNotice' pour stocker le nom du fichier PDF
+                // au lieu de son contenu
+                $notice->setphotoOneNotice($newFilename);
+            }
+            /** Fin du code à ajouter **/
+            
+
+
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($notice);
             $entityManager->flush();
