@@ -9,6 +9,8 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Validator\Constraints\File;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 
 
 class UserType extends AbstractType
@@ -16,18 +18,24 @@ class UserType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('email')
-            ->add('roles', ChoiceType::class, [
-                'choices' => [
-                    'Administrateur' => User::ROLE_ADMIN,
-                    'Utilisateur' => User::ROLE_USER,
+            ->add('email', TextType::class, ['label' => 'E-mail'])
+            ->add(
+                'roles',
+                ChoiceType::class,
+                [
+                    'choices' => [
+                        'Administrateur' => User::ROLE_ADMIN,
+                        'Utilisateur' => User::ROLE_USER,
+                    ],
+                    'multiple' => true,
+                    'expanded' => true,
+                    'required' => true,
                 ],
-                'multiple' => true,
-                'expanded' => true,
-                'required' => true,
-            ])
-            ->add('firstNameUser')
-            ->add('lastNameUser')
+                TextType::class,
+                ['label' => 'Rôle']
+            )
+            ->add('firstNameUser', TextType::class,['label' => 'Prénom'])
+            ->add('lastNameUser', TextType::class,['label' => 'Nom'])
             ->add('photoUser', FileType::class, [
                 'label' => 'Photo',
                 'mapped' => false,
@@ -38,19 +46,18 @@ class UserType extends AbstractType
                         'mimeTypes' => [
                             'image/*',
                         ],
-                        'mimeTypesMessage' => 'Veuillez entrer un format de document valide t\'es nul ou quoi?',
+                        'mimeTypesMessage' => 'Veuillez entrer un format de document valide',
                     ])
                 ],
             ])
-            ->add('birthdayDateUser')
-            ->add('phoneUser')
-            ->add('adressUser')
-            ->add('cityUser')
-            ->add('postalCodeUser')
-            ->add('civilityUser')
-            ->add('registrationDateUser')
-            ->add('pseudoUser')
-        ;
+            ->add('birthdayDateUser', BirthdayType::class,['label' => 'Date d\'anniverssaire'])
+            ->add('phoneUser', TextType::class,['label' => 'Téléphone'])
+            ->add('adressUser', TextType::class,['label' => 'Adresse'])
+            ->add('cityUser', TextType::class,['label' => 'Ville'])
+            ->add('postalCodeUser', TextType::class,['label' => 'Code postal'])
+            ->add('civilityUser', TextType::class,['label' => 'Civilité'])
+            ->add('registrationDateUser', TextType::class,['label' => 'Date d\'enregistrement'])
+            ->add('pseudoUser', TextType::class,['label' => 'Pseudo']);
     }
 
     public function configureOptions(OptionsResolver $resolver)

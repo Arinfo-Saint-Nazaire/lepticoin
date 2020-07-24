@@ -9,6 +9,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 /**
  * @Route("/messages")
@@ -26,11 +28,13 @@ class MessagesController extends AbstractController
     }
 
     /**
+     * @IsGranted("ROLE_USER")
      * @Route("/new", name="messages_new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
         $message = new Messages();
+        $message->setDateMessage(new \DateTime());
         $form = $this->createForm(MessagesType::class, $message);
         $form->handleRequest($request);
 
@@ -49,6 +53,7 @@ class MessagesController extends AbstractController
     }
 
     /**
+     * @IsGranted("ROLE_USER")
      * @Route("/{id}", name="messages_show", methods={"GET"})
      */
     public function show(Messages $message): Response
@@ -59,6 +64,7 @@ class MessagesController extends AbstractController
     }
 
     /**
+     * @IsGranted("ROLE_USER")
      * @Route("/{id}/edit", name="messages_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Messages $message): Response
