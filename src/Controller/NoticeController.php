@@ -46,13 +46,13 @@ class NoticeController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             /** Début du code à ajouter **/
             $photoOneNotice = $form->get('photoOneNotice')->getData();
- 
+
             if ($photoOneNotice) {
                 $originalFilename = pathinfo($photoOneNotice->getClientOriginalName(), PATHINFO_FILENAME);
                 // ceci est nécessaire pour inclure en toute sécurité le nom de fichier dans l'URL
                 $safeFilename = $slugger->slug($originalFilename);
-                $newFilename = $safeFilename.'-'.uniqid().'.'.$photoOneNotice->guessExtension();
- 
+                $newFilename = $safeFilename . '-' . uniqid() . '.' . $photoOneNotice->guessExtension();
+
                 // Déplacez le fichier dans le répertoire où les brochures sont stockées
                 try {
                     $photoOneNotice->move(
@@ -62,14 +62,47 @@ class NoticeController extends AbstractController
                 } catch (FileException $e) {
                     // ... gérer l'exception si quelque chose se produit pendant le téléchargement du fichier
                 }
- 
+
                 // met à jour la propriété 'photoOneNotice' pour stocker le nom du fichier PDF
                 // au lieu de son contenu
                 $notice->setphotoOneNotice($newFilename);
             }
             /** Fin du code à ajouter **/
-            
+            $photoTwoNotice = $form->get('photoTwoNotice')->getData();
 
+            if ($photoTwoNotice) {
+                $originalFilename = pathinfo($photoTwoNotice->getClientOriginalName(), PATHINFO_FILENAME);
+                $safeFilename = $slugger->slug($originalFilename);
+                $newFilename = $safeFilename . '-' . uniqid() . '.' . $photoTwoNotice->guessExtension();
+
+                try {
+                    $photoTwoNotice->move(
+                        $this->getParameter('photos_directory'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {
+                }
+
+                $notice->setphotoTwoNotice($newFilename);
+            }
+
+            $photoThreeNotice = $form->get('photoThreeNotice')->getData();
+
+            if ($photoThreeNotice) {
+                $originalFilename = pathinfo($photoThreeNotice->getClientOriginalName(), PATHINFO_FILENAME);
+                $safeFilename = $slugger->slug($originalFilename);
+                $newFilename = $safeFilename . '-' . uniqid() . '.' . $photoThreeNotice->guessExtension();
+
+                try {
+                    $photoThreeNotice->move(
+                        $this->getParameter('photos_directory'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {
+                }
+
+                $notice->setphotoThreeNotice($newFilename);
+            }
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($notice);
@@ -120,7 +153,7 @@ class NoticeController extends AbstractController
      */
     public function delete(Request $request, Notice $notice): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$notice->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $notice->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($notice);
             $entityManager->flush();
